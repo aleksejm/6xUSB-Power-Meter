@@ -28,13 +28,129 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:tm-kicad-lib
+LIBS:+1v2
+LIBS:+1v8
+LIBS:+3v
+LIBS:+3v3
+LIBS:+5v
+LIBS:+15v
+LIBS:+vs
+LIBS:2-spst
+LIBS:-15v
+LIBS:74avc4t245
+LIBS:74vc1t45
+LIBS:74vc2t45
+LIBS:aat1217
+LIBS:acs711ex
+LIBS:ad8429
+LIBS:ant
+LIBS:bat
+LIBS:buck-sot23-5
+LIBS:c
+LIBS:cm1624
+LIBS:com
+LIBS:conn-1
+LIBS:conn-2
+LIBS:conn-2x5
+LIBS:conn-3
+LIBS:conn-4
+LIBS:conn-5
+LIBS:conn-6
+LIBS:conn-7
+LIBS:conn-8
+LIBS:cp
+LIBS:d
+LIBS:debugheader
+LIBS:drdc3105
+LIBS:drv883x
+LIBS:esp-12
+LIBS:ferrite
+LIBS:fuse
+LIBS:gnd
+LIBS:ICE40HX4K-144
+LIBS:ina199
+LIBS:in-amp
+LIBS:ip425xcz12
+LIBS:jtag
+LIBS:jumper
+LIBS:k22f-64lqfp
+LIBS:l
+LIBS:led
+LIBS:lm3671
+LIBS:lm27313
+LIBS:lpddrx16
+LIBS:lt6102
+LIBS:lt6106
+LIBS:ltc3260
+LIBS:mag3110
+LIBS:max4737eud
+LIBS:max6070
+LIBS:max9938
+LIBS:mchck
+LIBS:mcp3221
+LIBS:mic5205
+LIBS:mic5365
+LIBS:microsd
+LIBS:MKL26ZxxVFM4
+LIBS:mkl27zxxvfm4
+LIBS:mounthole
+LIBS:mounting-hole
+LIBS:mpl3115a2
+LIBS:mpu6050
+LIBS:mpu-6050
+LIBS:nmos
+LIBS:nmos-pmos-sot23-6
+LIBS:npn
+LIBS:op-amp
+LIBS:phone-3
+LIBS:pmos
+LIBS:pnp
+LIBS:pot
+LIBS:power_flag
+LIBS:pwr
+LIBS:r
+LIBS:r4
+LIBS:relay
+LIBS:SAM3U-144
+LIBS:schottky
+LIBS:sip32401a
+LIBS:sit1602
+LIBS:solder-jumper-nc
+LIBS:spiflash
+LIBS:tactile-4
+LIBS:test
+LIBS:testpoint
+LIBS:thermistor
+LIBS:tlv713
+LIBS:tp4056
+LIBS:tpd4s012
+LIBS:tps6040x
+LIBS:tps27081a
+LIBS:ts3usb31
+LIBS:usb
+LIBS:usb334x
+LIBS:USB3300
+LIBS:vana
+LIBS:varef
+LIBS:vbu
+LIBS:vcore
+LIBS:vin
+LIBS:vio
+LIBS:vout
+LIBS:vpll
+LIBS:-vs
+LIBS:vtarget
+LIBS:vusb
+LIBS:vutmi
+LIBS:xtal
+LIBS:zener
+LIBS:LM1117MP-2.5
 LIBS:6xUSB_PowMet-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 1
 Title ""
 Date ""
 Rev ""
@@ -861,7 +977,7 @@ U 1 1 5710A0F2
 P 8350 1300
 F 0 "P1" H 8550 1100 50  0000 C CNN
 F 1 "USB_A" H 8300 1500 50  0000 C CNN
-F 2 "USB-A_vertical1:USB_A_Vertical" V 8300 1200 50  0001 C CNN
+F 2 "Connect:USB_A_Vertical" V 8300 1200 50  0001 C CNN
 F 3 "" V 8300 1200 50  0000 C CNN
 	1    8350 1300
 	1    0    0    -1  
@@ -872,7 +988,7 @@ U 1 1 5710A8AC
 P 10500 1250
 F 0 "P4" H 10700 1050 50  0000 C CNN
 F 1 "USB_A" H 10450 1450 50  0000 C CNN
-F 2 "USB-A_vertical1:USB_A_Vertical" V 10450 1150 50  0001 C CNN
+F 2 "Connect:USB_A_Vertical" V 10450 1150 50  0001 C CNN
 F 3 "" V 10450 1150 50  0000 C CNN
 	1    10500 1250
 	1    0    0    -1  
@@ -883,7 +999,7 @@ U 1 1 5710A975
 P 8500 2650
 F 0 "P2" H 8700 2450 50  0000 C CNN
 F 1 "USB_A" H 8450 2850 50  0000 C CNN
-F 2 "USB-A_vertical1:USB_A_Vertical" V 8450 2550 50  0001 C CNN
+F 2 "Connect:USB_A_Vertical" V 8450 2550 50  0001 C CNN
 F 3 "" V 8450 2550 50  0000 C CNN
 	1    8500 2650
 	1    0    0    -1  
@@ -894,7 +1010,7 @@ U 1 1 5710B4D7
 P 10500 4100
 F 0 "P5" H 10700 3900 50  0000 C CNN
 F 1 "USB_A" H 10450 4300 50  0000 C CNN
-F 2 "USB-A_vertical1:USB_A_Vertical" V 10450 4000 50  0001 C CNN
+F 2 "Connect:USB_A_Vertical" V 10450 4000 50  0001 C CNN
 F 3 "" V 10450 4000 50  0000 C CNN
 	1    10500 4100
 	1    0    0    -1  
@@ -905,7 +1021,7 @@ U 1 1 5710B5A7
 P 8600 3900
 F 0 "P3" H 8800 3700 50  0000 C CNN
 F 1 "USB_A" H 8550 4100 50  0000 C CNN
-F 2 "USB-A_vertical1:USB_A_Vertical" V 8550 3800 50  0001 C CNN
+F 2 "Connect:USB_A_Vertical" V 8550 3800 50  0001 C CNN
 F 3 "" V 8550 3800 50  0000 C CNN
 	1    8600 3900
 	1    0    0    -1  
@@ -916,11 +1032,19 @@ U 1 1 5710B3D1
 P 10550 2500
 F 0 "P6" H 10750 2300 50  0000 C CNN
 F 1 "USB_A" H 10500 2700 50  0000 C CNN
-F 2 "USB-A_vertical1:USB_A_Vertical" V 10500 2400 50  0001 C CNN
+F 2 "Connect:USB_A_Vertical" V 10500 2400 50  0001 C CNN
 F 3 "" V 10500 2400 50  0000 C CNN
 	1    10550 2500
 	1    0    0    -1  
 $EndComp
+NoConn ~ 10550 2800
+NoConn ~ 10450 2800
+NoConn ~ 10500 1550
+NoConn ~ 10400 1550
+NoConn ~ 8350 1600
+NoConn ~ 8250 1600
+NoConn ~ 8400 2950
+NoConn ~ 8500 2950
 NoConn ~ 8500 4200
 NoConn ~ 8600 4200
 NoConn ~ 10500 4400
@@ -1014,160 +1138,6 @@ F 3 "" H 9150 5050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 3050 3500
-$Comp
-L VCC #PWR028
-U 1 1 5711A464
-P 9150 1450
-F 0 "#PWR028" H 9150 1300 50  0001 C CNN
-F 1 "VCC" H 9150 1600 50  0000 C CNN
-F 2 "" H 9150 1450 50  0000 C CNN
-F 3 "" H 9150 1450 50  0000 C CNN
-	1    9150 1450
-	1    0    0    -1  
-$EndComp
-$Comp
-L VCC #PWR029
-U 1 1 5711AABD
-P 7050 3350
-F 0 "#PWR029" H 7050 3200 50  0001 C CNN
-F 1 "VCC" H 7050 3500 50  0000 C CNN
-F 2 "" H 7050 3350 50  0000 C CNN
-F 3 "" H 7050 3350 50  0000 C CNN
-	1    7050 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR030
-U 1 1 5711B10D
-P 1500 3950
-F 0 "#PWR030" H 1500 3700 50  0001 C CNN
-F 1 "GND" H 1500 3800 50  0000 C CNN
-F 2 "" H 1500 3950 50  0000 C CNN
-F 3 "" H 1500 3950 50  0000 C CNN
-	1    1500 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X02 P9
-U 1 1 571242B0
-P 2050 1650
-F 0 "P9" H 2050 1800 50  0000 C CNN
-F 1 "CONN_01X02" V 2150 1650 50  0000 C CNN
-F 2 "Connect:BARREL_JACK" H 2050 1650 50  0001 C CNN
-F 3 "" H 2050 1650 50  0000 C CNN
-	1    2050 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L VCC #PWR031
-U 1 1 5712440B
-P 1850 1600
-F 0 "#PWR031" H 1850 1450 50  0001 C CNN
-F 1 "VCC" H 1850 1750 50  0000 C CNN
-F 2 "" H 1850 1600 50  0000 C CNN
-F 3 "" H 1850 1600 50  0000 C CNN
-	1    1850 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR032
-U 1 1 57124699
-P 1850 1700
-F 0 "#PWR032" H 1850 1450 50  0001 C CNN
-F 1 "GND" H 1850 1550 50  0000 C CNN
-F 2 "" H 1850 1700 50  0000 C CNN
-F 3 "" H 1850 1700 50  0000 C CNN
-	1    1850 1700
-	1    0    0    -1  
-$EndComp
-$Sheet
-S 1250 5450 1950 1650
-U 571758E7
-F0 "USB hub" 60
-F1 "USB_hub.sch" 60
-$EndSheet
-Text GLabel 8250 1600 3    60   Input ~ 0
-D1-
-Text GLabel 8350 1600 3    60   Input ~ 0
-D1+
-Text GLabel 10400 1550 3    60   Input ~ 0
-D2-
-Text GLabel 10500 1550 3    60   Input ~ 0
-D2+
-Text GLabel 8400 2950 3    60   Input ~ 0
-D3-
-Text GLabel 8500 2950 3    60   Input ~ 0
-D3+
-Text GLabel 10450 2800 3    60   Input ~ 0
-D4-
-Text GLabel 10550 2800 3    60   Input ~ 0
-D4+
-$Comp
-L F_Small F1
-U 1 1 571A9766
-P 8050 1450
-F 0 "F1" V 8250 1400 50  0000 L CNN
-F 1 "F_Small" H 7930 1390 50  0001 L CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_HandSoldering" H 8050 1450 50  0001 C CNN
-F 3 "" H 8050 1450 50  0000 C CNN
-	1    8050 1450
-	0    1    1    0   
-$EndComp
-$Comp
-L F_Small F2
-U 1 1 571ABA94
-P 10200 1550
-F 0 "F2" V 10400 1500 50  0000 L CNN
-F 1 "F_Small" H 10080 1490 50  0001 L CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_HandSoldering" H 10200 1550 50  0001 C CNN
-F 3 "" H 10200 1550 50  0000 C CNN
-	1    10200 1550
-	0    1    1    0   
-$EndComp
-$Comp
-L F_Small F3
-U 1 1 571ABBEE
-P 10350 2900
-F 0 "F3" V 10550 2850 50  0000 L CNN
-F 1 "F_Small" H 10230 2840 50  0001 L CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_HandSoldering" H 10350 2900 50  0001 C CNN
-F 3 "" H 10350 2900 50  0000 C CNN
-	1    10350 2900
-	0    1    1    0   
-$EndComp
-$Comp
-L F_Small F4
-U 1 1 571ABCE5
-P 8300 3050
-F 0 "F4" V 8500 3000 50  0000 L CNN
-F 1 "F_Small" H 8180 2990 50  0001 L CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_HandSoldering" H 8300 3050 50  0001 C CNN
-F 3 "" H 8300 3050 50  0000 C CNN
-	1    8300 3050
-	0    1    1    0   
-$EndComp
-$Comp
-L F_Small F5
-U 1 1 571ABE05
-P 8400 4300
-F 0 "F5" V 8600 4250 50  0000 L CNN
-F 1 "F_Small" H 8280 4240 50  0001 L CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_HandSoldering" H 8400 4300 50  0001 C CNN
-F 3 "" H 8400 4300 50  0000 C CNN
-	1    8400 4300
-	0    1    1    0   
-$EndComp
-$Comp
-L F_Small F6
-U 1 1 571ABEF2
-P 10300 4500
-F 0 "F6" V 10500 4450 50  0000 L CNN
-F 1 "F_Small" H 10180 4440 50  0001 L CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_HandSoldering" H 10300 4500 50  0001 C CNN
-F 3 "" H 10300 4500 50  0000 C CNN
-	1    10300 4500
-	0    1    1    0   
-$EndComp
 Connection ~ 5050 6000
 Connection ~ 4950 6000
 Connection ~ 4750 6000
@@ -1258,9 +1228,9 @@ Wire Wire Line
 	7300 1250 7300 1300
 Connection ~ 7300 1250
 Wire Wire Line
-	7950 1250 7950 1950
+	7950 1850 7950 1250
 Wire Wire Line
-	7750 1250 8050 1250
+	7750 1250 8100 1250
 Connection ~ 7950 1250
 Wire Wire Line
 	8000 2150 8000 2050
@@ -1328,6 +1298,7 @@ Wire Wire Line
 Connection ~ 7550 2750
 Wire Wire Line
 	8200 2750 8200 3350
+Connection ~ 8200 2750
 Wire Wire Line
 	8250 3650 8250 3550
 Wire Wire Line
@@ -1360,6 +1331,9 @@ Wire Wire Line
 	9700 2850 9700 2900
 Connection ~ 9700 2850
 Wire Wire Line
+	10350 2800 10350 3450
+Connection ~ 10350 2850
+Wire Wire Line
 	10400 3750 10400 3650
 Wire Wire Line
 	10350 3650 10650 3650
@@ -1389,6 +1363,10 @@ Wire Wire Line
 	7550 4250 7550 4300
 Connection ~ 7550 4250
 Wire Wire Line
+	8200 4850 8200 4250
+Wire Wire Line
+	8000 4250 8400 4250
+Wire Wire Line
 	8250 5200 8250 5050
 Wire Wire Line
 	6650 4550 6650 4750
@@ -1413,6 +1391,7 @@ Wire Wire Line
 Wire Wire Line
 	9650 4450 9650 4500
 Connection ~ 9650 4450
+Connection ~ 10300 4450
 Wire Wire Line
 	10350 5350 10350 5250
 Wire Wire Line
@@ -1453,6 +1432,11 @@ Connection ~ 4850 6000
 Connection ~ 8900 2050
 Wire Wire Line
 	8400 4250 8400 4200
+Connection ~ 8200 4250
+Wire Wire Line
+	10100 4450 10300 4450
+Wire Wire Line
+	10350 2850 10150 2850
 Wire Wire Line
 	10650 3650 10650 2800
 Connection ~ 10400 3650
@@ -1472,9 +1456,15 @@ Wire Wire Line
 	8600 2950 8800 2950
 Connection ~ 8800 3150
 Wire Wire Line
-	8050 1600 8150 1600
+	10200 1450 10200 1550
+Wire Wire Line
+	8100 1250 8100 1600
+Wire Wire Line
+	8100 1600 8150 1600
 Wire Wire Line
 	8200 2750 8000 2750
+Wire Wire Line
+	8200 2950 8300 2950
 Wire Wire Line
 	10800 4000 10800 4400
 Wire Wire Line
@@ -1496,6 +1486,7 @@ Wire Wire Line
 	8900 3800 8900 4200
 Wire Wire Line
 	8900 4200 8700 4200
+Connection ~ 8200 2950
 Wire Wire Line
 	5200 2000 5050 2000
 Wire Wire Line
@@ -1503,11 +1494,48 @@ Wire Wire Line
 Wire Wire Line
 	10300 5250 10600 5250
 Wire Wire Line
+	10300 4400 10300 5050
+Wire Wire Line
 	3050 3600 3250 3600
 Wire Wire Line
 	3250 3600 3250 3500
 Wire Wire Line
 	3250 3500 3900 3500
+Wire Wire Line
+	10200 1550 10300 1550
+$Comp
+L VCC #PWR028
+U 1 1 5711A464
+P 9150 1450
+F 0 "#PWR028" H 9150 1300 50  0001 C CNN
+F 1 "VCC" H 9150 1600 50  0000 C CNN
+F 2 "" H 9150 1450 50  0000 C CNN
+F 3 "" H 9150 1450 50  0000 C CNN
+	1    9150 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR029
+U 1 1 5711AABD
+P 7050 3350
+F 0 "#PWR029" H 7050 3200 50  0001 C CNN
+F 1 "VCC" H 7050 3500 50  0000 C CNN
+F 2 "" H 7050 3350 50  0000 C CNN
+F 3 "" H 7050 3350 50  0000 C CNN
+	1    7050 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR030
+U 1 1 5711B10D
+P 1500 3950
+F 0 "#PWR030" H 1500 3700 50  0001 C CNN
+F 1 "GND" H 1500 3800 50  0000 C CNN
+F 2 "" H 1500 3950 50  0000 C CNN
+F 3 "" H 1500 3950 50  0000 C CNN
+	1    1500 3950
+	1    0    0    -1  
+$EndComp
 Connection ~ 5050 2000
 Wire Wire Line
 	7050 2050 7300 2050
@@ -1517,137 +1545,37 @@ Wire Wire Line
 	8250 5050 8200 5050
 Wire Wire Line
 	9400 5250 9650 5250
-Wire Wire Line
-	8050 1250 8050 1350
-Wire Wire Line
-	8050 1600 8050 1550
-Wire Wire Line
-	10300 1550 10300 1650
-Wire Wire Line
-	10300 1650 10200 1650
-Wire Wire Line
-	10350 3450 10350 3000
-Wire Wire Line
-	10150 2850 10250 2850
-Wire Wire Line
-	10250 2850 10250 3050
-Wire Wire Line
-	10250 3050 10350 3050
-Connection ~ 10350 3050
-Wire Wire Line
-	8300 3150 8200 3150
-Connection ~ 8200 3150
-Wire Wire Line
-	8400 4400 8200 4400
-Connection ~ 8200 4400
-Wire Wire Line
-	8000 4250 8200 4250
-Wire Wire Line
-	8200 4250 8200 4850
-Wire Wire Line
-	10300 5050 10300 4600
-Wire Wire Line
-	10100 4450 10100 4750
-Wire Wire Line
-	10100 4750 10300 4750
-Connection ~ 10300 4750
 $Comp
-L C_Small C18
-U 1 1 571B50F2
-P 8250 1950
-F 0 "C18" V 8200 1750 50  0000 L CNN
-F 1 "10uF" V 8350 1950 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8250 1950 50  0001 C CNN
-F 3 "" H 8250 1950 50  0000 C CNN
-	1    8250 1950
-	0    1    1    0   
+L CONN_01X02 P9
+U 1 1 571242B0
+P 2050 1650
+F 0 "P9" H 2050 1800 50  0000 C CNN
+F 1 "CONN_01X02" V 2150 1650 50  0000 C CNN
+F 2 "Connect:BARREL_JACK" H 2050 1650 50  0001 C CNN
+F 3 "" H 2050 1650 50  0000 C CNN
+	1    2050 1650
+	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C19
-U 1 1 571B5652
-P 10450 1950
-F 0 "C19" V 10350 1850 50  0000 L CNN
-F 1 "10uF" V 10550 1900 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10450 1950 50  0001 C CNN
-F 3 "" H 10450 1950 50  0000 C CNN
-	1    10450 1950
-	0    1    1    0   
+L VCC #PWR031
+U 1 1 5712440B
+P 1850 1600
+F 0 "#PWR031" H 1850 1450 50  0001 C CNN
+F 1 "VCC" H 1850 1750 50  0000 C CNN
+F 2 "" H 1850 1600 50  0000 C CNN
+F 3 "" H 1850 1600 50  0000 C CNN
+	1    1850 1600
+	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C20
-U 1 1 571B5934
-P 10500 3250
-F 0 "C20" V 10400 3150 50  0000 L CNN
-F 1 "10uF" V 10600 3250 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10500 3250 50  0001 C CNN
-F 3 "" H 10500 3250 50  0000 C CNN
-	1    10500 3250
-	0    1    1    0   
+L GND #PWR032
+U 1 1 57124699
+P 1850 1700
+F 0 "#PWR032" H 1850 1450 50  0001 C CNN
+F 1 "GND" H 1850 1550 50  0000 C CNN
+F 2 "" H 1850 1700 50  0000 C CNN
+F 3 "" H 1850 1700 50  0000 C CNN
+	1    1850 1700
+	1    0    0    -1  
 $EndComp
-$Comp
-L C_Small C21
-U 1 1 571B5A3D
-P 8450 3350
-F 0 "C21" V 8350 3400 50  0000 L CNN
-F 1 "10uF" V 8550 3350 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8450 3350 50  0001 C CNN
-F 3 "" H 8450 3350 50  0000 C CNN
-	1    8450 3350
-	0    1    1    0   
-$EndComp
-$Comp
-L C_Small C22
-U 1 1 571B5B61
-P 8500 4600
-F 0 "C22" V 8400 4600 50  0000 L CNN
-F 1 "10uF" V 8650 4550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8500 4600 50  0001 C CNN
-F 3 "" H 8500 4600 50  0000 C CNN
-	1    8500 4600
-	0    1    1    0   
-$EndComp
-$Comp
-L C_Small C23
-U 1 1 571B5C5E
-P 10450 4650
-F 0 "C23" V 10350 4550 50  0000 L CNN
-F 1 "10uF" V 10550 4650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10450 4650 50  0001 C CNN
-F 3 "" H 10450 4650 50  0000 C CNN
-	1    10450 4650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7950 1950 8150 1950
-Connection ~ 7950 1850
-Wire Wire Line
-	8500 1950 8350 1950
-Wire Wire Line
-	10550 1950 10600 1950
-Connection ~ 10600 1950
-Wire Wire Line
-	10350 1950 10050 1950
-Connection ~ 10050 1950
-Wire Wire Line
-	10600 3250 10650 3250
-Connection ~ 10650 3250
-Wire Wire Line
-	10400 3250 10350 3250
-Connection ~ 10350 3250
-Wire Wire Line
-	8800 3350 8550 3350
-Wire Wire Line
-	8200 3350 8350 3350
-Wire Wire Line
-	8600 4600 8700 4600
-Connection ~ 8700 4600
-Wire Wire Line
-	8400 4600 8200 4600
-Connection ~ 8200 4600
-Wire Wire Line
-	10350 4650 10300 4650
-Connection ~ 10300 4650
-Wire Wire Line
-	10550 4650 10600 4650
-Connection ~ 10600 4650
 $EndSCHEMATC

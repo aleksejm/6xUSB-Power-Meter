@@ -1,0 +1,29 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2015 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# TPS5450_DDA_8
+#
+DEF TPS5450_DDA_8 U 0 40 Y Y 1 L N
+F0 "U" 1014 359 50 H V L CNN
+F1 "TPS5450_DDA_8" 977 259 50 H V L CNN
+F2 "DDA8_3P1X2P4" 0 0 50 H I L CNN
+DRAW
+P 2 0 0 6 300 200 300 -600 N
+P 2 0 0 6 300 -600 2100 -600 N
+P 2 0 0 6 2100 -600 2100 200 N
+P 2 0 0 6 2100 200 300 200 N
+X EN 1 0 0 300 R 40 40 0 0 I 
+X VFB 2 0 -100 300 R 40 40 0 0 I 
+X VREG5 3 0 -200 300 R 40 40 0 0 O 
+X SS 4 0 -300 300 R 40 40 0 0 P 
+X GND 5 2400 -400 300 L 40 40 0 0 I 
+X SW 6 2400 -300 300 L 40 40 0 0 P 
+X VBST 7 2400 -200 300 L 40 40 0 0 P 
+X VIN 8 2400 -100 300 L 40 40 0 0 I 
+X EPAD EPAD 2400 0 300 L 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library

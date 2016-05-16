@@ -1,4 +1,4 @@
-update=12.05.2016 11:16:56
+update=16.05.2016 10:07:31
 version=1
 last_client=kicad
 [cvpcb]
@@ -16,25 +16,6 @@ SpiceUseNetNumbers=0
 LabSize=60
 [general]
 version=1
-[pcbnew]
-version=1
-PageLayoutDescrFile=
-LastNetListRead=6xUSB_PowMet3.net
-PadDrill=0.762
-PadDrillOvalY=0.762
-PadSizeH=1.524
-PadSizeV=1.524
-PcbTextSizeV=1.5
-PcbTextSizeH=1.5
-PcbTextThickness=0.3
-ModuleTextSizeV=1
-ModuleTextSizeH=1
-ModuleTextSizeThickness=0.15
-SolderMaskClearance=0.2
-SolderMaskMinWidth=0
-DrawSegmentWidth=0.2
-BoardOutlineThickness=0.15
-ModuleOutlineThickness=0.15
 [eeschema]
 version=1
 LibDir=../../kicad-library/tm-kicad-library-master/tm-kicad-lib.pretty;USB-A_vertical1.pretty;TPS5450_DDA_8
@@ -72,3 +53,22 @@ LibName30=valves
 LibName31=M:/Personal/kicad-library/tm-kicad-library-master/tm-kicad-lib
 LibName32=TPS5450_DDA_8/TPS5450_DDA_8
 LibName33=M:/Personal/kicad-lib-master/kicad-lib-master/tom_kicad
+[pcbnew]
+version=1
+PageLayoutDescrFile=
+LastNetListRead=6xUSB_PowMet.net
+PadDrill=0
+PadDrillOvalY=0
+PadSizeH=1.65
+PadSizeV=0.4
+PcbTextSizeV=1.5
+PcbTextSizeH=1.5
+PcbTextThickness=0.3
+ModuleTextSizeV=1
+ModuleTextSizeH=1
+ModuleTextSizeThickness=0.15
+SolderMaskClearance=0.2
+SolderMaskMinWidth=0
+DrawSegmentWidth=0.2
+BoardOutlineThickness=0.15
+ModuleOutlineThickness=0.15

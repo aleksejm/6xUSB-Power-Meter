@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:TPS5450-EP_DDA_8
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,9 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:tm-kicad-lib
-LIBS:TPS5450_DDA_8
-LIBS:tom_kicad
 LIBS:6xUSB_PowMet-cache
 EELAYER 25 0
 EELAYER END
@@ -954,8 +950,8 @@ L INDUCTOR_SMALL L2
 U 1 1 5730AE0E
 P 8050 5200
 F 0 "L2" H 8050 5300 50  0000 C CNN
-F 1 "INDUCTOR_SMALL" H 8050 5150 50  0000 C CNN
-F 2 "" H 8050 5200 50  0000 C CNN
+F 1 "10uH" H 8050 5150 50  0000 C CNN
+F 2 "Inductors_NEOSID:Neosid_Inductor_SM-NE56_SMD2220" H 8050 5200 50  0001 C CNN
 F 3 "" H 8050 5200 50  0000 C CNN
 	1    8050 5200
 	1    0    0    -1  

@@ -1,4 +1,4 @@
-(module USB_A_Vertical (layer F.Cu) (tedit 5746B487)
+(module USB-A_vertical1:USB_A_Vertical (layer F.Cu) (tedit 5746B487)
   (descr "USB A vertical female connector, right angle")
   (tags "USB_A_Vertical female connector angled 73725-0110BLF")
   (fp_text reference REF** (at 0.2 6.55) (layer F.SilkS)

@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:TPS5450-EP_DDA_8
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,9 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:tm-kicad-lib
-LIBS:TPS5450_DDA_8
-LIBS:tom_kicad
 LIBS:6xUSB_PowMet-cache
 EELAYER 25 0
 EELAYER END
@@ -138,12 +134,12 @@ $EndComp
 $Comp
 L R R6
 U 1 1 570E382E
-P 3750 2300
-F 0 "R6" V 3830 2300 50  0000 C CNN
-F 1 "10k" V 3750 2300 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" H 3680 2300 50  0001 C CNN
-F 3 "" H 3750 2300 50  0000 C CNN
-	1    3750 2300
+P 3650 2300
+F 0 "R6" V 3730 2300 50  0000 C CNN
+F 1 "10k" V 3650 2300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" H 3580 2300 50  0001 C CNN
+F 3 "" H 3650 2300 50  0000 C CNN
+	1    3650 2300
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -185,7 +181,7 @@ U 1 1 570E40B6
 P 4800 1900
 F 0 "L1" H 4895 1980 50  0000 R CNN
 F 1 "10uH" H 4930 1980 50  0000 L CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" H 4930 1960 60  0001 C CNN
+F 2 "Inductors:Inductor_1212" H 4930 1960 60  0001 C CNN
 F 3 "" H 4930 1960 60  0000 C CNN
 	1    4800 1900
 	1    0    0    -1  
@@ -928,17 +924,6 @@ NoConn ~ 8500 4200
 NoConn ~ 8600 4200
 NoConn ~ 10500 4400
 NoConn ~ 10400 4400
-$Comp
-L CONN_01X08 P7
-U 1 1 5710F84D
-P 6300 6300
-F 0 "P7" H 6300 6750 50  0000 C CNN
-F 1 "CONN_01X08" V 6400 6300 50  0000 C CNN
-F 2 "Connect:Wafer_Vertical22.5x5.8x7RM2.5-8" H 6300 6300 50  0001 C CNN
-F 3 "" H 6300 6300 50  0000 C CNN
-	1    6300 6300
-	1    0    0    -1  
-$EndComp
 Text GLabel 5900 3600 2    60   Input ~ 0
 SS
 Text GLabel 5900 3700 2    60   Input ~ 0
@@ -963,13 +948,13 @@ Text GLabel 6100 6150 0    60   Input ~ 0
 MISO
 Text GLabel 6100 6250 0    60   Input ~ 0
 SCK
-Text GLabel 6100 6550 0    60   Input ~ 0
-SCL
 Text GLabel 6100 6650 0    60   Input ~ 0
+SCL
+Text GLabel 6100 6750 0    60   Input ~ 0
 SDA
-Text GLabel 6100 6350 0    60   Input ~ 0
-RXD
 Text GLabel 6100 6450 0    60   Input ~ 0
+RXD
+Text GLabel 6100 6550 0    60   Input ~ 0
 TXD
 $Comp
 L CONN_01X03 P8
@@ -1161,8 +1146,6 @@ Wire Wire Line
 Wire Wire Line
 	1150 3800 1500 3800
 Connection ~ 1500 3800
-Wire Wire Line
-	3600 2300 3400 2300
 Wire Wire Line
 	3400 2300 3400 2200
 Connection ~ 4550 2000
@@ -1622,4 +1605,34 @@ Wire Wire Line
 Connection ~ 10600 4650
 Wire Wire Line
 	3450 3500 3450 3550
+$Comp
+L CONN_01X06 P7
+U 1 1 57441869
+P 6300 6200
+F 0 "P7" H 6300 6550 50  0000 C CNN
+F 1 "CONN_01X06" V 6400 6200 50  0000 C CNN
+F 2 "Connect:Wafer_Vertical20x5.8x7RM2.5-7" H 6300 6200 50  0001 C CNN
+F 3 "" H 6300 6200 50  0000 C CNN
+	1    6300 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P9
+U 1 1 57441936
+P 6300 6650
+F 0 "P9" H 6300 6850 50  0000 C CNN
+F 1 "CONN_01X03" V 6400 6650 50  0000 C CNN
+F 2 "Connect:Wafer_Vertical10x5.8x7RM2.5-3" H 6300 6650 50  0001 C CNN
+F 3 "" H 6300 6650 50  0000 C CNN
+	1    6300 6650
+	1    0    0    -1  
+$EndComp
+Text GLabel 6100 6350 0    60   Input ~ 0
+RST
+Text GLabel 3900 2300 1    60   Input ~ 0
+RST
+Wire Wire Line
+	3400 2300 3500 2300
+Wire Wire Line
+	3800 2300 3900 2300
 $EndSCHEMATC

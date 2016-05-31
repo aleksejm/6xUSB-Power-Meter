@@ -77,14 +77,14 @@ F 3 "" H 5750 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Crystal_Small Y1
+L CRYSTAL_SMD Y1
 U 1 1 5717A09F
-P 5550 3200
-F 0 "Y1" H 5550 3300 50  0000 C CNN
-F 1 "12Mhz" H 5550 3100 50  0000 C CNN
-F 2 "Crystals:Crystal_HC49-SD_SMD" H 5550 3200 50  0001 C CNN
-F 3 "" H 5550 3200 50  0000 C CNN
-	1    5550 3200
+P 5450 3100
+F 0 "Y1" H 5450 3200 50  0000 C CNN
+F 1 "12Mhz" H 5450 3000 50  0000 C CNN
+F 2 "Crystals:Crystal_SMD_5032_4Pads" H 5450 3100 50  0001 C CNN
+F 3 "" H 5450 3100 50  0000 C CNN
+	1    5450 3100
 	0    1    1    0   
 $EndComp
 $Comp
@@ -656,7 +656,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 3000 5750 3150
 Wire Wire Line
-	5550 3300 5750 3300
+	5450 3300 5750 3300
 Wire Wire Line
 	5750 3300 5750 3250
 Wire Wire Line
@@ -716,8 +716,6 @@ Wire Wire Line
 	5600 4050 6350 4050
 Wire Wire Line
 	3900 2750 4950 2750
-Wire Wire Line
-	5550 3100 5550 3050
 Wire Wire Line
 	5550 3050 5750 3050
 Connection ~ 5750 3050
@@ -1104,4 +1102,23 @@ Wire Wire Line
 Connection ~ 4050 1550
 Text GLabel 10100 4200 1    60   Input ~ 0
 VREG
+Wire Wire Line
+	5550 3050 5550 2900
+Wire Wire Line
+	5550 2900 5450 2900
+Wire Wire Line
+	5350 3100 5300 3100
+Wire Wire Line
+	5300 3100 5300 3250
+$Comp
+L Earth #PWR052
+U 1 1 5746C36B
+P 5300 3250
+F 0 "#PWR052" H 5300 3000 50  0001 C CNN
+F 1 "Earth" H 5300 3100 50  0001 C CNN
+F 2 "" H 5300 3250 50  0000 C CNN
+F 3 "" H 5300 3250 50  0000 C CNN
+	1    5300 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

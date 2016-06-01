@@ -1,0 +1,18 @@
+Part	Manufacturer	Part Number	Quantity	Price	Attribute 1 Name	Attribute 1 Value	Attribute 2 Name	Attribute 2 Value	Attribute 3 Name	Attribute 3 Value	Footprint		
+Cbst	Taiyo Yuden	EMK212B7474KD-T	1	0.02		470nF	805				805	CL21B474KBFNNNG 0805	Salvats
+Cbyp	AVX	08053C104KAT2A	1	0.01		100nF	805				805	CL21B104JBCNNNC 0805	Salvats
+Cin	MuRata	GRM32ER61E226KE15L	2	0.05		22uF	1210				1210	CL31A226KQHNNNE	Salvats
+Cout	Panasonic	6SVPE220MW	1	0.34		220uF	6.3x5.4				CAPSMT_62_E61	S220/6.3SMD	Lemona
+Css	Yageo America	CC0805KRX7R9BB153	1	0.04		15nF	805				805	CSM15NFY5V	Lemona
+Cvcc	Taiyo Yuden	EMK212B7105KG-T	1	0.04		1uF	805				805	CSM1UFY5V	Lemona
+L1	Bourns	SRP1270-2R2M	1	2.02	L	2.2uH	DCR	4.2mOhm	IDC	22A	SRP1270		Lemona
+M1	Texas Instruments	CSD16342Q5A	1	1	VdsMax	25V	IdsMax	100A	Rdson	4.3mOhm	TRANS_NexFET_Q5A		Lemona
+M2	Texas Instruments	CSD17577Q5A	1	1.35	VdsMax	30V	IdsMax	22A	Rdson	4.8mOhm	TRANS_NexFET_Q5A		Lemona
+Rfb1	Panasonic	ERJ-6ENF1002V	1	0.08	Resistance	10kOhm	Tolerance	1%	Power	0.125W	805		Elfa
+Rfb2	Panasonic	ERJ-6ENF7322V	1	0.08	Resistance	73.2kOhm	Tolerance	1%	Power	0.125W	805		Elfa
+Rilim	Panasonic	ERJ-6ENF1051V	1	0.08	Resistance	1.05kOhm	Tolerance	1%	Power	0.125W	805	ERJ6ENF1071V	Elfa
+Ron	Panasonic	ERJ-6ENF1003V	1	0.08	Resistance	100kOhm	Tolerance	1%	Power	0.125W	805		Elfa
+U1	Texas Instruments	LM3150MH/NOPB	1	4.34							MXA14A		Elfa
+Cff	Kemet	C0805C471K5RACTU	1	0.01		470pF	805				805	CL21B471KBANNNC 0805	Salvats
+													
+				9.54									

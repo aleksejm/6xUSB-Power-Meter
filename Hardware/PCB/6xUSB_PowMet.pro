@@ -1,4 +1,4 @@
-update=01.06.2016 18:45:25
+update=07.06.2016 12:51:15
 version=1
 last_client=kicad
 [cvpcb]
@@ -25,19 +25,9 @@ BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
-LibDir=../../../../kicad-schlib-master;../../../../kicad-library-master3;../../../../../Personal;../../../../kicad-library-master-logic
+LibDir=../../../../kicad-schlib-master;../../../../kicad-library-master3;../../../../../Personal;../../../../kicad-library-master-logic;../../../../KiCad-master
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -149,3 +139,13 @@ LibName107=M:/Personal/kicad-library-master3/kicad-library-master/library/Worlds
 LibName108=M:/Personal/kicad-library-master3/kicad-library-master/library/Xicor
 LibName109=M:/Personal/kicad-library-master3/kicad-library-master/library/xilinx
 LibName110=M:/Personal/kicad-library-master3/kicad-library-master/library/Zilog
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

@@ -1,0 +1,42 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# ADS7846
+#
+DEF ADS7846 IC 0 40 Y Y 1 L N
+F0 "IC" -400 700 50 H V L CNN
+F1 "ADS7846" -400 -700 50 H V L CNN
+F2 "TSSOP16" 0 0 50 H I L CNN
+F3 "ADS7846" 0 0 50 H I L CNN "MP"
+F4 "None" 0 0 50 H I L CNN "Price"
+F5 "None" 0 0 50 H I L CNN "Package"
+F6 "Texas Instruments" 0 0 50 H I L CNN "MF"
+F7 "the ads7846 is a next-generation version to the industry standard ads7843 4-wire touch screen controller. the ads7846..." 0 0 50 H I L CNN "Description"
+F8 "Unavailable" 0 0 50 H I L CNN "Availability"
+DRAW
+P 2 0 0 10 -400 600 -400 -600 N
+P 2 0 0 10 -400 -600 400 -600 N
+P 2 0 0 10 400 -600 400 600 N
+P 2 0 0 10 400 600 -400 600 N
+X X+ 2 600 500 200 L 40 40 0 0 I 
+X Y+ 3 600 300 200 L 40 40 0 0 I 
+X Y- 5 600 200 200 L 40 40 0 0 I 
+X AUX 8 600 -100 200 L 40 40 0 0 I 
+X DCLK 16 -600 200 200 R 40 40 0 0 O 
+X !CS 15 -600 500 200 R 40 40 0 0 I 
+X DIN 14 -600 400 200 R 40 40 0 0 I 
+X BUSY 13 -600 100 200 R 40 40 0 0 O 
+X DOUT 12 -600 300 200 R 40 40 0 0 I 
+X !PENIRQ 11 -600 0 200 R 40 40 0 0 O 
+X X- 4 600 400 200 L 40 40 0 0 I 
+X GND 6 -600 -500 200 R 40 40 0 0 I 
+X VCC@1 1 -600 -200 200 R 40 40 0 0 I 
+X VBAT 7 600 -300 200 L 40 40 0 0 I 
+X VCC@2 10 -600 -300 200 R 40 40 0 0 I 
+X VREF 9 600 -500 200 L 40 40 0 0 B 
+ENDDRAW
+ENDDEF
+#
+# End Library

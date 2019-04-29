@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP IRF7607PBF
+D HexFET N-MOS Power Mosfet, Vds 20V, Rdson 0.03R, Id 5.2A, Micro8
+K HexFET Power Mosfet N-MOS
+F http://www.irf.com/product-info/datasheets/data/irf7607pbf.pdf
+$ENDCMP
+#
+#End Doc Library

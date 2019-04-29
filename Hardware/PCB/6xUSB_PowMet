@@ -1,0 +1,91 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>KiCad BOM Example 5</title>
+    </head>
+    <body>
+    <h1>C:\Users\aleks\OneDrive\GitHub\6xUSB-Power-Meter\Hardware\PCB\6xUSB_PowMet.sch</h1>
+    <p>04/08/2017 22:10:10</p>
+    <p>Eeschema 4.0.6</p>
+    <p><b>Component Count:</b>173</p>
+    <table>
+    <tr><th style='width:640px'>Ref</th><th>Qnty</th><th>Value</th><th>Part</th><th>Footprint</th><th>Description</th><th>Vendor</th></tr>
+    <tr><td>C1, C10, C15, C16, C17, C27, C3, C34, C35, C38, C4, C48, C5, C6, C7, C8, C9</td><td>17</td><td>100n</td><td>device:C_Small</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C11, C12, C13, C14, C21, C22, C23, C42</td><td>8</td><td>1nF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C18, C19, C20, C28, C36, C44, C45</td><td>7</td><td>10uF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C2</td><td>1</td><td>0.33uF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C24, C30, C33</td><td>3</td><td>0.1uF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0603</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C25, C32</td><td>2</td><td>22pF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0603</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C26, C52</td><td>2</td><td>18pF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C29</td><td>1</td><td>10nF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C31, C37, C51</td><td>3</td><td>47uF</td><td>device:C_Small</td><td>Capacitors_SMD:C_1206</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C39</td><td>1</td><td>15nF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C40</td><td>1</td><td>470nF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C41</td><td>1</td><td>1uF</td><td>device:C_Small</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C43</td><td>1</td><td>330uF</td><td>device:CP1_Small</td><td>Capacitors_SMD:CP_Elec_6.3x5.8</td><td>Polarised capacitor</td><td></td></tr>
+    <tr><td>C46</td><td>1</td><td>22uF</td><td>device:CP1_Small</td><td>Capacitors_Tantalum_SMD:CP_Tantalum_Case-R_EIA-2012-12_Reflow</td><td>Polarised capacitor</td><td></td></tr>
+    <tr><td>C47, C49</td><td>2</td><td>1uF</td><td>device:C</td><td>Capacitors_SMD:C_0805</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>CON2</td><td>1</td><td>BARREL_JACK</td><td>6xUSB_PowMet-cache:BARREL_JACK</td><td>Connect:JACK_ALIM</td><td></td><td></td></tr>
+    <tr><td>D1</td><td>1</td><td>USB Power</td><td>6xUSB_PowMet-cache:Led_Small</td><td>LEDs:LED_D3.0mm_Horizontal_O6.35mm_Z6.0mm</td><td></td><td></td></tr>
+    <tr><td>D10</td><td>1</td><td>SKL14</td><td>device:D_Schottky</td><td>Diodes_SMD:SOD-123</td><td>Schottky diode</td><td></td></tr>
+    <tr><td>D11</td><td>1</td><td>SK152-TP</td><td>6xUSB_PowMet-cache:SCHDPAK</td><td>agg:DO-214AB-SMC</td><td></td><td></td></tr>
+    <tr><td>D2</td><td>1</td><td>MC Status</td><td>6xUSB_PowMet-cache:Led_Small</td><td>LEDs:LED_0603</td><td></td><td></td></tr>
+    <tr><td>D3</td><td>1</td><td>CD1206-S01575</td><td>device:D</td><td>Diodes_SMD:D_1206</td><td>Diode</td><td></td></tr>
+    <tr><td>D6</td><td>1</td><td>Led_Small_3mm</td><td>6xUSB_PowMet-cache:Led_Small</td><td>LEDs:LED_D3.0mm_Horizontal_O6.35mm_Z6.0mm</td><td></td><td></td></tr>
+    <tr><td>D9</td><td>1</td><td>Power DC</td><td>6xUSB_PowMet-cache:Led_Small</td><td>LEDs:LED_D3.0mm_Horizontal_O6.35mm_Z6.0mm</td><td></td><td></td></tr>
+    <tr><td>F1, F2, F3, F4, F5, F6</td><td>6</td><td>F_Small</td><td>6xUSB_PowMet-cache:F_Small</td><td>Fuse_Holders_and_Fuses:Fuse_SMD1206_Reflow</td><td></td><td></td></tr>
+    <tr><td>F7, F8</td><td>2</td><td>MSMF050-2</td><td>device:Fuse_Small</td><td>Resistors_SMD:R_1812</td><td>Fuse, small symbol</td><td></td></tr>
+    <tr><td>J1</td><td>1</td><td>MICROUSB</td><td>connector:MICROUSB</td><td>kicad-libs-master:USB-MICRO-B-FCI-10118193</td><td>MicroUSB port</td><td></td></tr>
+    <tr><td>L1</td><td>1</td><td>MH2029-300Y</td><td>device:Ferrite_Bead</td><td>Inductors_SMD:L_0805</td><td>Ferrite bead</td><td></td></tr>
+    <tr><td>L10, L2, L5, L6, L7</td><td>5</td><td>WE-CNSW</td><td>device:L_Core_double_Iron_Small</td><td>Inductors_SMD:L_1206</td><td>Inductor with iron core, small symbol</td><td></td></tr>
+    <tr><td>L3</td><td>1</td><td>4.7uH 5.2mOhm</td><td>6xUSB_PowMet-cache:INDUCTOR_SMALL</td><td></td><td></td><td></td></tr>
+    <tr><td>L4</td><td>1</td><td>Bead/100MHZ/470ohm/2A</td><td>6xUSB_PowMet-cache:INDUCTOR_SMALL</td><td>Resistors_SMD:R_0805_HandSoldering</td><td></td><td></td></tr>
+    <tr><td>L8, L9</td><td>2</td><td>WE-CBF</td><td>device:L_Small</td><td>Inductors_SMD:L_0603</td><td>Inductor, small symbol</td><td></td></tr>
+    <tr><td>LED1, LED2, LED3, LED4</td><td>4</td><td>Led_Small</td><td>6xUSB_PowMet-cache:Led_Small</td><td>Inductors_SMD:L_1806</td><td></td><td></td></tr>
+    <tr><td>P1, P2, P3, P4, P5, P6</td><td>6</td><td>USB_A</td><td>6xUSB_PowMet-rescue:USB_A-RESCUE-6xUSB_PowMet</td><td>USB_A_Vertical:USB_A_Vertical</td><td></td><td></td></tr>
+    <tr><td>P10</td><td>1</td><td>USB_B</td><td>6xUSB_PowMet-rescue:USB_B-RESCUE-6xUSB_PowMet</td><td>Connect:USB_B</td><td></td><td></td></tr>
+    <tr><td>P11, P12</td><td>2</td><td>CONN_02X04</td><td>conn:CONN_02X04</td><td>Socket_Strips:Socket_Strip_Straight_2x04</td><td>Connector, double row, 02x04, pin header</td><td></td></tr>
+    <tr><td>P13</td><td>1</td><td>Burn</td><td>conn:CONN_01X02</td><td>Pin_Headers:Pin_Header_Straight_2x01</td><td>Connector, single row, 01x02, pin header</td><td></td></tr>
+    <tr><td>P7</td><td>1</td><td>CONN_01X09</td><td>conn:CONN_01X09</td><td>Pin_Headers:Pin_Header_Straight_1x09_Pitch2.54mm</td><td>Connector, single row, 01x09, pin header</td><td></td></tr>
+    <tr><td>P8</td><td>1</td><td>CONN_01X03</td><td>conn:CONN_01X03</td><td>Pin_Headers:Pin_Header_Straight_1x03</td><td>Connector, single row, 01x03, pin header</td><td></td></tr>
+    <tr><td>Q1</td><td>1</td><td>IRFR5305PBF</td><td>device:Q_PMOS_GDS</td><td>TO_SOT_Packages_SMD1:TO-252-2Lead</td><td>Transistor P-MOSFET with substrate diode (general)</td><td></td></tr>
+    <tr><td>Q2</td><td>1</td><td>CSD16321Q5</td><td>transistors:IRF7607PBF</td><td>Personal:AB2_SON5x6_FET</td><td>HexFET N-MOS Power Mosfet, Vds 20V, Rdson 0.03R, Id 5.2A, Micro8</td><td></td></tr>
+    <tr><td>Q3</td><td>1</td><td>CSD18509Q5B</td><td>transistors:IRF7607PBF</td><td>Personal:AB2_SON5x6_FET</td><td>HexFET N-MOS Power Mosfet, Vds 20V, Rdson 0.03R, Id 5.2A, Micro8</td><td></td></tr>
+    <tr><td>Q4, Q5, Q6, Q7, Q8, Q9</td><td>6</td><td>IRLML6401</td><td>transistor:P-CHAN-MOSFET_SOT</td><td>TO_SOT_Packages_SMD:SOT-23</td><td>P-channel SOT MOSFET</td><td></td></tr>
+    <tr><td>R1, R46</td><td>2</td><td>470R</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R10, R13, R15, R16, R17, R19, R26, R27, R3, R30, R39, R4, R40, R42, R6, R8, R9</td><td>17</td><td>10K</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R11, R12, R18, R2, R20, R21</td><td>6</td><td>0.02R</td><td>device:R</td><td>Resistors_SMD:R_1206</td><td>Resistor</td><td></td></tr>
+    <tr><td>R14, R22, R23, R24, R25, R41, R43, R44, R47</td><td>9</td><td>100R</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R28, R38, R45</td><td>3</td><td>100K</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R29</td><td>1</td><td>2.7K</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R31</td><td>1</td><td>330</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R32, R7</td><td>2</td><td>22R</td><td>device:R</td><td>Resistors_SMD:R_0805</td><td>Resistor</td><td></td></tr>
+    <tr><td>R33</td><td>1</td><td>470K</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R34</td><td>1</td><td>237K</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R35</td><td>1</td><td>1K07</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R36</td><td>1</td><td>73K2</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R37</td><td>1</td><td>10K</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R48, R49</td><td>2</td><td>150R</td><td>device:R_Small</td><td>Resistors_SMD:R_0805</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>R5</td><td>1</td><td>15K</td><td>device:R</td><td>Resistors_SMD:R_0805</td><td>Resistor</td><td></td></tr>
+    <tr><td>RV1, RV2</td><td>2</td><td>CG0603MLC-05E</td><td>standard:VDR</td><td>Inductors_SMD:L_0603</td><td>Varistor</td><td></td></tr>
+    <tr><td>SW1</td><td>1</td><td>Reset</td><td>6xUSB_PowMet-cache:SW_PUSH</td><td>Buttons_Switches_SMD:SW_SPST_B3U-1000P</td><td></td><td></td></tr>
+    <tr><td>SW2</td><td>1</td><td>Reset</td><td>6xUSB_PowMet-cache:SW_PUSH</td><td>Buttons_Switches_SMD:SW_SPST_B3U-3000P</td><td></td><td></td></tr>
+    <tr><td>TP1</td><td>1</td><td>TEST</td><td>device:TEST</td><td>Measurement_Points:Measurement_Point_Round-SMD-Pad_Small</td><td>Testpoint, connection for test equipment</td><td></td></tr>
+    <tr><td>U1</td><td>1</td><td>24LC02</td><td>memory:24LC02</td><td>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</td><td>I2C Serial EEPROM, 16kb</td><td></td></tr>
+    <tr><td>U10</td><td>1</td><td>ESP-07v2</td><td>ESP8266:ESP-12E</td><td>ESP8266:ESP-12E</td><td>ESP8622 ESP-12E module, 22 pins, 2mm, PCB antenna</td><td></td></tr>
+    <tr><td>U11</td><td>1</td><td>LTC4412</td><td>6xUSB_PowMet-cache:LTC4412</td><td>TO_SOT_Packages_SMD:SOT-23-6</td><td></td><td></td></tr>
+    <tr><td>U12</td><td>1</td><td>5v to 3.3v LDO</td><td>regul:L7805</td><td>TO_SOT_Packages_SMD:SOT-223-3Lead_TabPin2</td><td>Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252</td><td></td></tr>
+    <tr><td>U13</td><td>1</td><td>LM3150</td><td>6xUSB_PowMet-cache:LM3150</td><td>Housings_SSOP:SSOP-14_5.3x6.2mm_Pitch0.65mm</td><td></td><td></td></tr>
+    <tr><td>U14, U2, U4, U5, U6, U7</td><td>6</td><td>LT6106</td><td>6xUSB_PowMet-cache:LT6106-RESCUE-6xUSB_PowMet</td><td>TO_SOT_Packages_SMD:SOT-23-5</td><td></td><td></td></tr>
+    <tr><td>U3</td><td>1</td><td>ATMEGA32U4-AU</td><td>atmel:ATMEGA32U4-AU</td><td>Housings_QFP:LQFP-44_10x10mm_Pitch0.8mm</td><td>TQFP44, 16K Flash, 1.25K SRAM, 512B EEPROM, USB2.0</td><td></td></tr>
+    <tr><td>U8</td><td>1</td><td>LM4040N-4.1</td><td>6xUSB_PowMet-cache:LM4040AvvDBZ</td><td>TO_SOT_Packages_SMD:SOT-23</td><td></td><td></td></tr>
+    <tr><td>U9</td><td>1</td><td>FE1.1s</td><td>6xUSB_PowMet-cache:FE1.1s</td><td>Housings_SSOP:TSSOP-28_4.4x9.7mm_Pitch0.65mm</td><td></td><td></td></tr>
+    <tr><td>Y1</td><td>1</td><td>12Mhz</td><td>device:Crystal_Small</td><td>Crystals:Crystal_HC49-SD_SMD</td><td>Two pin crystal, small symbol</td><td></td></tr>
+    <tr><td>Y2</td><td>1</td><td>16.000 Mhz</td><td>device:Crystal_GND24_Small</td><td>Crystals:Crystal_SMD_5032-4pin_5.0x3.2mm</td><td>Two pin crystal, two ground/package pins (pin2 and 4) small symbol</td><td></td></tr><!--TABLEROW-->
+    </table>
+    </body>
+</html>
+    

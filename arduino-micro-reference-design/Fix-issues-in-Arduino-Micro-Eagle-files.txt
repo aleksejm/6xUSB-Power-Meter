@@ -1,0 +1,109 @@
+From bed7dc2443c9e0734b34de4a8cde5f1705e8830a Mon Sep 17 00:00:00 2001
+From: Michael Lass <lass@mail.uni-paderborn.de>
+Date: Thu, 23 Feb 2017 20:24:18 +0100
+Subject: [PATCH] Fix issues in Arduino Micro Eagle files
+
+* Remove invalid characters from .sch
+* Fix cross referencing by unifying U2 part type
+---
+ Arduino_Micro_Rev03j.brd | 56 ++++++++++++++++++++++--------------------------
+ Arduino_Micro_Rev03j.sch |  2 +-
+ 2 files changed, 27 insertions(+), 31 deletions(-)
+
+diff --git a/Arduino_Micro_Rev03j.brd b/Arduino_Micro_Rev03j.brd
+index 393d66d..d1c6607 100644
+--- a/Arduino_Micro_Rev03j.brd
++++ b/Arduino_Micro_Rev03j.brd
+@@ -461,6 +461,31 @@ chip</description>
+ <circle x="0" y="0" radius="1.5" width="0.127" layer="41"/>
+ <smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100"/>
+ </package>
++<package name="LINEAR_SOT223">
++<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
++<wire x1="3.2766" y1="1.778" x2="3.2766" y2="-1.778" width="0.2032" layer="21"/>
++<wire x1="3.2766" y1="-1.778" x2="-3.2766" y2="-1.778" width="0.2032" layer="21"/>
++<wire x1="-3.2766" y1="-1.778" x2="-3.2766" y2="1.778" width="0.2032" layer="21"/>
++<wire x1="-3.2766" y1="1.778" x2="3.2766" y2="1.778" width="0.2032" layer="21"/>
++<smd name="1" x="-2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
++<smd name="2" x="0" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
++<smd name="3" x="2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
++<smd name="4" x="0" y="3.099" dx="3.6" dy="2.2" layer="1"/>
++<text x="1.0208" y="-4.318" size="0.8128" layer="21" ratio="12">3</text>
++<text x="1.905" y="2.54" size="0.8128" layer="21" ratio="12">4</text>
++<text x="-3.4526" y="-4.318" size="0.8128" layer="21" ratio="12">1</text>
++<text x="-1.2906" y="-4.3274" size="0.8128" layer="21" ratio="12">2</text>
++<text x="-2.54" y="0.0508" size="1.27" layer="25">&gt;NAME</text>
++<text x="-2.54" y="-1.3208" size="1.27" layer="27">&gt;VALUE</text>
++<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
++<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
++<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
++<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
++<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
++<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
++<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
++<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
++</package>
+ <package name="TS42">
+ <wire x1="2.977" y1="-2.889" x2="2.977" y2="2.889" width="0.127" layer="21"/>
+ <wire x1="-2.977" y1="2.889" x2="-2.977" y2="0.5" width="0.127" layer="21"/>
+@@ -595,35 +620,6 @@ chip</description>
+ </package>
+ </packages>
+ </library>
+-<library name="linear">
+-<packages>
+-<package name="SOT223">
+-<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
+-<wire x1="3.2766" y1="1.778" x2="3.2766" y2="-1.778" width="0.2032" layer="21"/>
+-<wire x1="3.2766" y1="-1.778" x2="-3.2766" y2="-1.778" width="0.2032" layer="21"/>
+-<wire x1="-3.2766" y1="-1.778" x2="-3.2766" y2="1.778" width="0.2032" layer="21"/>
+-<wire x1="-3.2766" y1="1.778" x2="3.2766" y2="1.778" width="0.2032" layer="21"/>
+-<smd name="1" x="-2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+-<smd name="2" x="0" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+-<smd name="3" x="2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+-<smd name="4" x="0" y="3.099" dx="3.6" dy="2.2" layer="1"/>
+-<text x="1.0208" y="-4.318" size="0.8128" layer="21" ratio="12">3</text>
+-<text x="1.905" y="2.54" size="0.8128" layer="21" ratio="12">4</text>
+-<text x="-3.4526" y="-4.318" size="0.8128" layer="21" ratio="12">1</text>
+-<text x="-1.2906" y="-4.3274" size="0.8128" layer="21" ratio="12">2</text>
+-<text x="-2.54" y="0.0508" size="1.27" layer="25">&gt;NAME</text>
+-<text x="-2.54" y="-1.3208" size="1.27" layer="27">&gt;VALUE</text>
+-<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+-<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+-<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+-<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+-<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+-<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+-<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+-<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+-</package>
+-</packages>
+-</library>
+ <library name="wuerth-elektronik">
+ <packages>
+ <package name="0805">
+@@ -1026,7 +1022,7 @@ design rules under a new name.</description>
+ <attribute name="NAME" x="15.24" y="34.29" size="0.8128" layer="49" ratio="12" rot="R90"/>
+ <attribute name="VALUE" x="16.891" y="32.512" size="1.27" layer="27" rot="R90"/>
+ </element>
+-<element name="U2" library="linear" package="SOT223" value="NCP1117-5" x="7.493" y="34.163" smashed="yes" rot="MR270">
++<element name="U2" library="SmartPrj" package="LINEAR_SOT223" value="NCP1117-5" x="7.493" y="34.163" smashed="yes" rot="MR270">
+ <attribute name="NAME" x="5.715" y="30.1117" size="0.8128" layer="50" ratio="12" rot="MR180"/>
+ <attribute name="VALUE" x="8.8138" y="36.703" size="1.27" layer="28" rot="MR270"/>
+ </element>
+diff --git a/Arduino_Micro_Rev03j.sch b/Arduino_Micro_Rev03j.sch
+index 00ddfcf..a016e7d 100644
+--- a/Arduino_Micro_Rev03j.sch
++++ b/Arduino_Micro_Rev03j.sch
+@@ -132,7 +132,7 @@
+ <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
+ <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
+ </layers>
+-<schematic xreflabel="Ð­" xrefpart="/%S.%C%R">
++<schematic>
+ <libraries>
+ <library name="frames">
+ <packages>
+-- 
+2.11.1
+

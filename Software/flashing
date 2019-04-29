@@ -1,0 +1,3 @@
+sudo su -
+cd /media/pi/SAMSUNG/GitHub/6xUSB-Power-Meter/Software/
+avrdude -p m32 -c linuxspi -P /dev/spidev0.0 -U flash:w:USB_Power_Meter.ino.hex 

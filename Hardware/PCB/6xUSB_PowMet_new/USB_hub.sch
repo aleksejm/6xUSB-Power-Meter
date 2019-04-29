@@ -1,0 +1,3229 @@
+EESchema Schematic File Version 4
+LIBS:6xUSB_PowMet-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title "6-port USB Power meter with 4-port USB 2.0 HUB"
+Date "2018-11-22"
+Rev "v2.2"
+Comp "AleksIC"
+Comment1 "Power input"
+Comment2 "Power managing"
+Comment3 "USB output ports"
+Comment4 ""
+$EndDescr
+$Comp
+L 6xUSB_PowMet-rescue:LTC4412 U8
+U 1 1 57343D46
+P 4900 3475
+F 0 "U8" H 4900 3175 60  0000 C CNN
+F 1 "LTC4412" H 4900 3775 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4900 3475 60  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/4412fb.pdf" H 4900 3475 60  0001 C CNN
+F 4 "LTC4412ES6#TRMPBF" H 4900 3475 50  0001 C CNN "Part Number"
+F 5 "Analog Devices" H 4900 3475 50  0001 C CNN "Manufacturerer"
+F 6 "Hot Swap Controller 1-CH 28V P-Channel Positive Low Voltage 6-Pin TSOT-23" H 4900 3475 50  0001 C CNN "Description"
+	1    4900 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PMOS_GDS Q4
+U 1 1 57344130
+P 5600 2925
+F 0 "Q4" V 5550 3125 50  0000 R CNN
+F 1 "IRFR5305PBF" V 5825 3150 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD1:TO-252-2Lead" H 5800 3025 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/196/irfr5305pbf-936380.pdf" H 5600 2925 50  0001 C CNN
+F 4 "IRFR5305TRLPBF" H 5600 2925 50  0001 C CNN "Part Number"
+F 5 "Infineon Technologies" H 5600 2925 50  0001 C CNN "Manufacturerer"
+F 6 "Trans MOSFET P-CH Si 55V 31A 3-Pin(2+Tab) DPAK Tube" H 5600 2925 50  0001 C CNN "Description"
+	1    5600 2925
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C29
+U 1 1 5734496A
+P 6150 3025
+F 0 "C29" H 5975 3100 50  0000 L CNN
+F 1 "100nF" H 5900 2950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6150 3025 50  0001 C CNN
+F 3 "" H 6150 3025 50  0000 C CNN
+F 4 "10%" H 6150 3025 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 6150 3025 50  0001 C CNN "Series"
+F 6 "25V" H 6150 3025 50  0001 C CNN "Voltage"
+	1    6150 3025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R33
+U 1 1 57344D56
+P 5850 3475
+F 0 "R33" H 5650 3525 50  0000 L CNN
+F 1 "470K" H 5600 3425 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 5850 3475 50  0001 C CNN
+F 3 "" H 5850 3475 50  0000 C CNN
+F 4 "5%" H 5850 3475 50  0001 C CNN "Tolerance"
+F 5 "125mW" H 5850 3475 50  0001 C CNN "Power Rating"
+	1    5850 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L conn:Jack-DC CON2
+U 1 1 574EA023
+P 775 1200
+F 0 "CON2" H 775 1450 50  0000 C CNN
+F 1 "JACK" H 775 1000 50  0000 C CNN
+F 2 "Connect:JACK_ALIM" H 775 1200 50  0001 C CNN
+F 3 "" H 775 1200 50  0000 C CNN
+	1    775  1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C16
+U 1 1 574EA059
+P 1325 1200
+F 0 "C16" H 1150 1275 50  0000 L CNN
+F 1 "22uF" H 1125 1125 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1325 1200 50  0001 C CNN
+F 3 "" H 1325 1200 50  0000 C CNN
+F 4 "10%" H 1325 1200 50  0001 C CNN "Tolerance"
+F 5 "X5R" H -225 -250 50  0001 C CNN "Series"
+F 6 "25V" H 1325 1200 50  0001 C CNN "Voltage"
+F 7 "Cap Ceramic 22uF 25V X5R 10% Pad SMD 1210 85°C T/R" H 1325 1200 50  0001 C CNN "Description"
+	1    1325 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C19
+U 1 1 574EA738
+P 1900 1200
+F 0 "C19" H 1750 1275 50  0000 L CNN
+F 1 "100nF" H 1650 1125 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1900 1200 50  0001 C CNN
+F 3 "" H 1900 1200 50  0000 C CNN
+F 4 "10%" H 1900 1200 50  0001 C CNN "Tolerance"
+F 5 "X7R" H -250 -250 50  0001 C CNN "Series"
+F 6 "25V" H 1900 1200 50  0001 C CNN "Voltage"
+F 7 "Cap Ceramic 0.1uF 25V X7R 10% Pad SMD 0805 125°C T/R" H 1900 1200 50  0001 C CNN "Description"
+	1    1900 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:LM3150 U6
+U 1 1 574EA9D7
+P 2950 1350
+F 0 "U6" H 2950 1875 50  0000 C CNN
+F 1 "LM3150" H 2950 1800 50  0000 C CNN
+F 2 "Housings_SSOP:SSOP-14_5.3x6.2mm_Pitch0.65mm" H 2950 2150 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm3150.pdf" H 3000 2050 60  0001 C CNN
+F 4 "LM3150MH/NOPB" H 2950 1350 50  0001 C CNN "Part Number"
+F 5 "Texas Instruments" H 2950 1350 50  0001 C CNN "Manufacturerer"
+F 6 "Switching Controllers 42V SYNC STEP-DOWN" H 2950 1350 50  0001 C CNN "Description"
+	1    2950 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R23
+U 1 1 574EACE8
+P 2275 1150
+F 0 "R23" V 2225 925 50  0000 L CNN
+F 1 "100K" V 2325 875 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 2275 1150 50  0001 C CNN
+F 3 "" H 2275 1150 50  0000 C CNN
+F 4 "1%" H 2275 1150 50  0001 C CNN "Tolerance"
+F 5 "" H 2275 1150 50  0001 C CNN "Series"
+F 6 "Thick Film Resistors - SMD 0805 100Kohms 1% AEC-Q200" H 2275 1150 50  0001 C CNN "Description"
+F 7 "125mW" H 2275 1150 50  0001 C CNN "Power Rating"
+	1    2275 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C20
+U 1 1 574EB129
+P 2150 1400
+F 0 "C20" H 2175 1325 50  0000 L CNN
+F 1 "15nF" H 2175 1475 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2150 1400 50  0001 C CNN
+F 3 "" H 2150 1400 50  0000 C CNN
+F 4 "10%" H 2150 1400 50  0001 C CNN "Tolerance"
+F 5 "" H 2150 1400 50  0001 C CNN "Material"
+F 6 "50V" H 2150 1400 50  0001 C CNN "Voltage"
+F 7 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 15nF 50V X7R 10%" H 2150 1400 50  0001 C CNN "Description"
+F 8 "X7R" H -250 -250 50  0001 C CNN "Series"
+	1    2150 1400
+	-1   0    0    1   
+$EndComp
+NoConn ~ 2400 1350
+$Comp
+L Device:C_Small C26
+U 1 1 574EBFCD
+P 4000 1150
+F 0 "C26" V 3950 975 50  0000 L CNN
+F 1 "1uF" V 4050 975 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4000 1150 50  0001 C CNN
+F 3 "" H 4000 1150 50  0000 C CNN
+F 4 "10%" H 4000 1150 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 4000 1150 50  0001 C CNN "Series"
+F 6 "16V" H 4000 1150 50  0001 C CNN "Voltage"
+F 7 "Cap Ceramic 1uF 16V X7R 10% Pad SMD 0805 125°C T/R" H 4000 1150 50  0001 C CNN "Description"
+	1    4000 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C25
+U 1 1 574EC410
+P 3750 1250
+F 0 "C25" V 3700 1075 50  0000 L CNN
+F 1 "470nF" V 3800 975 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3750 1250 50  0001 C CNN
+F 3 "" H 3750 1250 50  0000 C CNN
+F 4 "10%" H 3750 1250 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 3750 1250 50  0001 C CNN "Series"
+F 6 "16V" H 3750 1250 50  0001 C CNN "Voltage"
+F 7 "Cap Ceramic 0.47uF 16V X7R 10% Pad SMD 0805 125°C T/R" H 3750 1250 50  0001 C CNN "Description"
+	1    3750 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R27
+U 1 1 574EC696
+P 3750 1450
+F 0 "R27" V 3700 1225 50  0000 L CNN
+F 1 "1K07" V 3800 1175 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 3750 1450 50  0001 C CNN
+F 3 "" H 3750 1450 50  0000 C CNN
+F 4 "1%" H 3750 1450 50  0001 C CNN "Tolerance"
+F 5 "" H 3750 1450 50  0001 C CNN "Series"
+F 6 "Res Thick Film 0805 1.07K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD Automotive T/R" H 3750 1450 50  0001 C CNN "Description"
+F 7 "125mW" H 3750 1450 50  0001 C CNN "Power Rating"
+	1    3750 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L transistors:IRF7607PBF Q2
+U 1 1 574ED3DE
+P 4675 1050
+F 0 "Q2" H 4625 1350 50  0000 L CNN
+F 1 "CSD16342Q5A" H 4475 800 50  0000 L CNN
+F 2 "Mosfet:AB2_SON5x6_FET" H 4675 1250 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/csd16342q5a.pdf" V 4675 1050 50  0001 L CNN
+F 4 "25V" H 4675 1050 50  0001 C CNN "Voltage"
+F 5 "Texas Instruments" H 4675 1050 50  0001 C CNN "Manufacturerer"
+F 6 "Trans MOSFET N-CH 25V 21A 8-Pin VSONP EP T/R" H 4675 1050 50  0001 C CNN "Description"
+	1    4675 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:IRF7607PBF Q1
+U 1 1 574EE57F
+P 4475 1700
+F 0 "Q1" H 4425 2000 50  0000 L CNN
+F 1 "CSD17577Q5A" H 4275 1450 50  0000 L CNN
+F 2 "Personal:AB2_SON5x6_FET" H 4475 1900 50  0001 C CIN
+F 3 "www.ti.com/lit/ds/symlink/csd17577q5a.pdf" V 4475 1700 50  0001 L CNN
+F 4 "30V" H 4475 1700 50  0001 C CNN "Voltage"
+F 5 "CSD17577Q5A" H 4475 1700 50  0001 C CNN "Part Number"
+F 6 "Texas Instruments" H 4475 1700 50  0001 C CNN "Manufacturerer"
+F 7 "Trans MOSFET N-CH 30V 60A 8-Pin VSONP EP T/R" H 4475 1700 50  0001 C CNN "Description"
+	1    4475 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:INDUCTOR_SMALL L3
+U 1 1 574EF69D
+P 5250 1000
+F 0 "L3" H 5250 1100 50  0000 C CNN
+F 1 "2.2uH" H 5250 950 50  0000 C CNN
+F 2 "Inductors:SELF-WE-PD-XXL" H 5250 1000 50  0001 C CNN
+F 3 "https://www.bourns.com/pdfs/SRP1270.pdf" H 5250 1000 50  0001 C CNN
+F 4 "SRP1270-2R2M" H 5250 1000 50  0001 C CNN "Part Number"
+F 5 "Bourns" H 5250 1000 50  0001 C CNN "Manufacturerer"
+F 6 "Wirewound 2.2uH 20% 100KHz Iron 22A 4.2mOhm DCR T/R" H 5250 1000 50  0001 C CNN "Description"
+	1    5250 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C28
+U 1 1 574EF8F2
+P 5525 1525
+F 0 "C28" H 5375 1600 50  0000 L CNN
+F 1 "470pF" H 5275 1450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5525 1525 50  0001 C CNN
+F 3 "" H 5525 1525 50  0000 C CNN
+F 4 "10%" H 5525 1525 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 5525 1525 50  0001 C CNN "Series"
+F 6 "50V" H 5525 1525 50  0001 C CNN "Voltage"
+F 7 "Cap Ceramic 470pF 50V X7R 10% Pad SMD 0805 125°C T/R" H 5525 1525 50  0001 C CNN "Description"
+	1    5525 1525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R31
+U 1 1 574EFCDD
+P 5850 1550
+F 0 "R31" H 5900 1500 50  0000 L CNN
+F 1 "73K2" H 5900 1600 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 5850 1550 50  0001 C CNN
+F 3 "" H 5850 1550 50  0000 C CNN
+F 4 "1%" H 5850 1550 50  0001 C CNN "Tolerance"
+F 5 "" H 5850 1550 50  0001 C CNN "Series"
+F 6 "Res Thick Film 0805 73.2K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD Automotive T/R" H 5850 1550 50  0001 C CNN "Description"
+F 7 "125mW" H 5850 1550 50  0001 C CNN "Power Rating"
+	1    5850 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R32
+U 1 1 574F00A4
+P 5850 1850
+F 0 "R32" H 5900 1800 50  0000 L CNN
+F 1 "10K" H 5900 1900 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 5850 1850 50  0001 C CNN
+F 3 "" H 5850 1850 50  0000 C CNN
+F 4 "1%" H 5850 1850 50  0001 C CNN "Tolerance"
+F 5 "" H 5850 1850 50  0001 C CNN "Series"
+F 6 "Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ±100ppm/°C Pad SMD Automotive T/R" H 5850 1850 50  0001 C CNN "Description"
+F 7 "125mW" H 5850 1850 50  0001 C CNN "Power Rating"
+	1    5850 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP1_Small C30
+U 1 1 574F07DD
+P 6175 1700
+F 0 "C30" H 5975 1775 50  0000 L CNN
+F 1 "220uF" H 5925 1625 50  0000 L CNN
+F 2 "Capacitors_SMD:c_elec_6.3x7.7" H 6175 1700 50  0001 C CNN
+F 3 "" H 6175 1700 50  0000 C CNN
+F 4 "20%" H 6175 1700 50  0001 C CNN "Tolerance"
+F 5 "SVPE" H 6175 1700 50  0001 C CNN "Series"
+F 6 "6.3V" H 6175 1700 50  0001 C CNN "Voltage"
+F 7 "Cap Aluminum Polymer 220uF 6.3VDC 20% (5 X 5.9mm) SMD 0.015 Ohm 3150mA 2000h 105°C T/R" H 6175 1700 50  0001 C CNN "Description"
+	1    6175 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:SCHDPAK D5
+U 1 1 574F72ED
+P 6500 1050
+F 0 "D5" H 6525 950 50  0000 C CNN
+F 1 "SK2030YD2" H 6500 1150 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:TO-263-2" H 6500 1050 50  0001 C CNN
+F 3 "static6.arrow.com/aropdfconversion/337d0a6770d50ba0e4d4a05ecafe6cb062536bd4/539sk2020yd2.pdf" H 6500 1050 50  0001 C CNN
+F 4 "30V" H 6500 1050 50  0001 C CNN "Voltage"
+F 5 "Diode Schottky 30V 20A 3-Pin(2+Tab) D2PAK Tube" H 6500 1050 50  0001 C CNN "Description"
+	1    6500 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R34
+U 1 1 574F8E31
+P 6500 1550
+F 0 "R34" H 6300 1600 50  0000 L CNN
+F 1 "470R" H 6300 1500 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 6500 1550 50  0001 C CNN
+F 3 "" H 6500 1550 50  0000 C CNN
+F 4 "5%" H 6500 1550 50  0001 C CNN "Tolerance"
+F 5 "125mW" H 6500 1550 50  0001 C CNN "Power Rating"
+	1    6500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:Led_Small LED6
+U 1 1 574F8E37
+P 6500 1800
+F 0 "LED6" V 6575 1825 50  0000 L CNN
+F 1 "DC_PW" V 6425 1825 50  0000 L CNN
+F 2 "LEDs:LED_D5.0mm" V 6500 1800 50  0001 C CNN
+F 3 "" V 6500 1800 50  0000 C CNN
+	1    6500 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R28
+U 1 1 5757E462
+P 4000 3475
+F 0 "R28" H 3800 3425 50  0000 L CNN
+F 1 "10K" H 3800 3525 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 4000 3475 50  0001 C CNN
+F 3 "" H 4000 3475 50  0000 C CNN
+F 4 "5%" H 4000 3475 50  0001 C CNN "Tolerance"
+F 5 "125mW" H 4000 3475 50  0001 C CNN "Power Rating"
+	1    4000 3475
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R30
+U 1 1 5757F961
+P 5600 3775
+F 0 "R30" H 5650 3825 50  0000 L CNN
+F 1 "10K" H 5650 3725 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 5600 3775 50  0001 C CNN
+F 3 "" H 5600 3775 50  0000 C CNN
+F 4 "5%" H 5600 3775 50  0001 C CNN "Tolerance"
+F 5 "125mW" H 5600 3775 50  0001 C CNN "Power Rating"
+	1    5600 3775
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1325 1350 1325 1300
+Wire Wire Line
+	2400 1250 2150 1250
+Wire Wire Line
+	3500 1150 3900 1150
+Wire Wire Line
+	3650 1250 3500 1250
+Wire Wire Line
+	3650 1450 3500 1450
+Wire Wire Line
+	3500 1350 3900 1350
+Wire Wire Line
+	3900 1450 3850 1450
+Connection ~ 3900 1350
+Wire Wire Line
+	2300 675  2300 1050
+Connection ~ 2300 1050
+Wire Wire Line
+	3500 1550 3900 1550
+Wire Wire Line
+	5525 1425 5525 1350
+Wire Wire Line
+	5400 1350 5525 1350
+Wire Wire Line
+	3000 1950 3000 2000
+Connection ~ 5525 1350
+Wire Wire Line
+	1900 1350 1900 1300
+Wire Wire Line
+	1600 1300 1600 1350
+Connection ~ 1600 1350
+Wire Wire Line
+	1900 1100 1900 1050
+Wire Wire Line
+	1325 1350 1600 1350
+Wire Wire Line
+	3900 1350 3900 1450
+Wire Wire Line
+	2300 1050 2400 1050
+Wire Wire Line
+	1600 1350 1900 1350
+Wire Wire Line
+	4300 3475 4250 3475
+Wire Wire Line
+	4250 3475 4250 3625
+Wire Wire Line
+	4300 3625 4250 3625
+Connection ~ 4250 3625
+Wire Wire Line
+	4250 3625 4250 3725
+Wire Wire Line
+	5500 3625 5600 3625
+Wire Wire Line
+	5600 3675 5600 3625
+Connection ~ 5600 3625
+Wire Wire Line
+	5850 3575 5850 3625
+Wire Wire Line
+	5600 3625 5850 3625
+Connection ~ 5850 3625
+Wire Wire Line
+	5850 3625 6075 3625
+Wire Wire Line
+	5850 3375 5850 3325
+Wire Wire Line
+	5850 3325 5500 3325
+Wire Wire Line
+	5600 3125 5600 3475
+Wire Wire Line
+	5600 3475 5500 3475
+Wire Wire Line
+	5800 2825 5850 2825
+Wire Wire Line
+	6150 2825 6150 2925
+Connection ~ 6150 2825
+Wire Wire Line
+	3650 3325 4000 3325
+Wire Wire Line
+	4000 3375 4000 3325
+Connection ~ 4000 3325
+Wire Wire Line
+	4000 3325 4250 3325
+$Comp
+L power:GND #PWR?
+U 1 1 5C137CFA
+P 2875 5575
+AR Path="/5C137CFA" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5C137CFA" Ref="#PWR040"  Part="1" 
+F 0 "#PWR040" H 2875 5325 50  0001 C CNN
+F 1 "GND" H 2875 5425 50  0000 C CNN
+F 2 "" H 2875 5575 50  0000 C CNN
+F 3 "" H 2875 5575 50  0000 C CNN
+	1    2875 5575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5C137D00
+P 2875 4950
+AR Path="/5C137D00" Ref="R?"  Part="1" 
+AR Path="/571758E7/5C137D00" Ref="R24"  Part="1" 
+F 0 "R24" H 2925 4900 50  0000 L CNN
+F 1 "100R" H 2925 5000 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 2875 4950 50  0001 C CNN
+F 3 "" H 2875 4950 50  0000 C CNN
+F 4 "1%" H 2875 4950 50  0001 C CNN "Tolerance"
+F 5 "125mW" H 75  0   50  0001 C CNN "Power Rating"
+	1    2875 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:LM4040AvvDBZ U?
+U 1 1 5C137D08
+P 2875 5350
+AR Path="/5C137D08" Ref="U?"  Part="1" 
+AR Path="/571758E7/5C137D08" Ref="U5"  Part="1" 
+F 0 "U5" H 2750 5500 50  0000 C CNN
+F 1 "LM4040" H 2725 5200 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 2875 5150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm4040-n.pdf" H 2875 5350 60  0001 C CNN
+F 4 "LM4040DIM3-4.1/NOPB" H 2875 5350 50  0001 C CNN "Part Number"
+F 5 "Texas Instruments" H 2875 5350 50  0001 C CNN "Manufacturerer"
+F 6 "V-Ref Precision 4.096V 15mA 3-Pin SOT-23 T/R" H 2875 5350 50  0001 C CNN "Description"
+F 7 "" H 2875 5050 60  0001 C CNN "BOM"
+	1    2875 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C137D16
+P 3325 5575
+AR Path="/5C137D16" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5C137D16" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 3325 5325 50  0001 C CNN
+F 1 "GND" H 3325 5425 50  0000 C CNN
+F 2 "" H 3325 5575 50  0000 C CNN
+F 3 "" H 3325 5575 50  0000 C CNN
+	1    3325 5575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C137D23
+P 2425 5575
+AR Path="/5C137D23" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5C137D23" Ref="#PWR038"  Part="1" 
+F 0 "#PWR038" H 2425 5325 50  0001 C CNN
+F 1 "GND" H 2425 5425 50  0000 C CNN
+F 2 "" H 2425 5575 50  0000 C CNN
+F 3 "" H 2425 5575 50  0000 C CNN
+	1    2425 5575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2875 5575 2875 5500
+Wire Wire Line
+	2875 5050 2875 5125
+Connection ~ 2875 5125
+Wire Wire Line
+	3325 5200 3325 5125
+Wire Wire Line
+	3325 5500 3325 5575
+Wire Wire Line
+	2425 5300 2425 5575
+Wire Wire Line
+	2875 5125 3325 5125
+$Comp
+L 6xUSB_PowMet-rescue:AP1117E50 U?
+U 1 1 5C137D34
+P 1225 4875
+AR Path="/5C137D34" Ref="U?"  Part="1" 
+AR Path="/571758E7/5C137D34" Ref="U4"  Part="1" 
+F 0 "U4" H 1225 5225 50  0000 C CNN
+F 1 "AP1117E33" H 1225 5125 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-89-3" H 1225 4875 50  0001 C CNN
+F 3 "http://static6.arrow.com/aropdfconversion/6f5e703c3970974f1b70ea58e5776ea6dc7ff8da/ap1117.pdf" H 1225 4875 50  0001 C CNN
+F 4 "AP1117E33G-13" H 1225 4875 50  0001 C CNN "Part Number"
+F 5 "Diodes Incorporated" H 1225 4875 50  0001 C CNN "Manufacturerer"
+F 6 "Standard Regulator Pos 3.3V 0.5A 4-Pin(3+Tab) SOT-223 T/R" H 1225 4875 50  0001 C CNN "Description"
+	1    1225 4875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1525 4875 1625 4875
+$Comp
+L power:GND #PWR?
+U 1 1 5C137D3C
+P 1225 5325
+AR Path="/5C137D3C" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5C137D3C" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 1225 5075 50  0001 C CNN
+F 1 "GND" H 1225 5175 50  0000 C CNN
+F 2 "" H 1225 5325 50  0000 C CNN
+F 3 "" H 1225 5325 50  0000 C CNN
+	1    1225 5325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 5175 1225 5275
+Wire Wire Line
+	925  4875 825  4875
+Wire Wire Line
+	825  4975 825  4875
+Connection ~ 825  4875
+Wire Wire Line
+	825  5175 825  5275
+Wire Wire Line
+	825  5275 1225 5275
+Connection ~ 1225 5275
+Wire Wire Line
+	1625 5275 1625 5175
+Wire Wire Line
+	1625 4975 1625 4875
+Connection ~ 1625 4875
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C137D60
+P 1800 4850
+AR Path="/5C137D60" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5C137D60" Ref="#PWR034"  Part="1" 
+F 0 "#PWR034" H 1800 4700 50  0001 C CNN
+F 1 "+3V3" H 1775 5000 50  0000 C CNN
+F 2 "" H 1800 4850 50  0000 C CNN
+F 3 "" H 1800 4850 50  0000 C CNN
+	1    1800 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2875 5125 2875 5200
+Wire Wire Line
+	825  4875 650  4875
+Wire Wire Line
+	1225 5275 1225 5325
+Wire Wire Line
+	1225 5275 1625 5275
+Wire Wire Line
+	1625 4875 1800 4875
+Wire Wire Line
+	3325 4925 3325 5125
+Connection ~ 3325 5125
+Text Notes 1225 875  0    60   ~ 0
+Vin = 7.5V - 13.2V\nVout = 5.0V\nIout = 10.0A
+Text Notes 575  675  0    60   ~ 12
+DC Power IN
+Wire Wire Line
+	1075 1200 1075 1300
+$Comp
+L Device:C_Small C17
+U 1 1 5C28A545
+P 1600 1200
+F 0 "C17" H 1425 1275 50  0000 L CNN
+F 1 "22uF" H 1400 1125 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1600 1200 50  0001 C CNN
+F 3 "" H 1600 1200 50  0000 C CNN
+F 4 "10%" H 1600 1200 50  0001 C CNN "Tolerance"
+F 5 "X5R" H -250 -250 50  0001 C CNN "Series"
+F 6 "25V" H 1600 1200 50  0001 C CNN "Voltage"
+F 7 "Cap Ceramic 22uF 25V X5R 10% Pad SMD 1210 85°C T/R" H 1600 1200 50  0001 C CNN "Description"
+	1    1600 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1075 1100 1075 1050
+Wire Wire Line
+	1075 1050 1325 1050
+Connection ~ 1900 1050
+Wire Wire Line
+	1600 1100 1600 1050
+Wire Wire Line
+	1325 1100 1325 1050
+Connection ~ 1325 1050
+Wire Wire Line
+	1325 1050 1600 1050
+Wire Wire Line
+	1325 1350 1075 1350
+Wire Wire Line
+	1075 1350 1075 1300
+Connection ~ 1325 1350
+Connection ~ 1075 1300
+Wire Wire Line
+	2400 1150 2375 1150
+Wire Wire Line
+	2175 1150 2050 1150
+Wire Wire Line
+	2050 1150 2050 1050
+Connection ~ 2050 1050
+Wire Wire Line
+	2050 1050 2300 1050
+Wire Wire Line
+	2400 1450 2350 1450
+Wire Wire Line
+	2350 1450 2350 1550
+Wire Wire Line
+	2400 1650 2350 1650
+Connection ~ 2350 1650
+Wire Wire Line
+	2400 1550 2350 1550
+Connection ~ 2350 1550
+Wire Wire Line
+	2350 1550 2350 1650
+Wire Wire Line
+	3900 1350 3900 1250
+Wire Wire Line
+	3900 1250 3850 1250
+Wire Wire Line
+	3900 1350 4300 1350
+Wire Wire Line
+	4200 1050 4200 1200
+Wire Wire Line
+	4200 1200 4375 1200
+Wire Wire Line
+	4375 950  4300 950 
+Wire Wire Line
+	4300 950  4300 1050
+Wire Wire Line
+	5050 675  5050 850 
+Wire Wire Line
+	5050 950  4975 950 
+Wire Wire Line
+	4975 850  5050 850 
+Connection ~ 5050 850 
+Wire Wire Line
+	5050 850  5050 950 
+Wire Wire Line
+	4975 1050 5050 1050
+Wire Wire Line
+	5050 1050 5050 950 
+Connection ~ 5050 950 
+Wire Wire Line
+	4975 1150 5050 1150
+Wire Wire Line
+	5050 1150 5050 1050
+Connection ~ 5050 1050
+Wire Wire Line
+	4375 850  4300 850 
+Wire Wire Line
+	4300 850  4300 950 
+Connection ~ 4300 950 
+Wire Wire Line
+	4375 1050 4300 1050
+Connection ~ 4300 1050
+Wire Wire Line
+	4300 1050 4300 1350
+Wire Wire Line
+	4775 1800 4875 1800
+Wire Wire Line
+	4875 1800 4875 1700
+Wire Wire Line
+	4775 1500 4875 1500
+Connection ~ 4875 1500
+Wire Wire Line
+	4875 1500 4875 1350
+Wire Wire Line
+	4775 1600 4875 1600
+Connection ~ 4875 1600
+Wire Wire Line
+	4875 1600 4875 1500
+Wire Wire Line
+	4775 1700 4875 1700
+Connection ~ 4875 1700
+Wire Wire Line
+	4875 1700 4875 1600
+Wire Wire Line
+	4175 1500 4075 1500
+Wire Wire Line
+	4075 1500 4075 1600
+Wire Wire Line
+	4075 1700 4175 1700
+Wire Wire Line
+	4175 1600 4075 1600
+Connection ~ 4075 1600
+Wire Wire Line
+	4075 1600 4075 1700
+Wire Wire Line
+	3900 1550 3900 1850
+Wire Wire Line
+	4000 1650 4000 1600
+Wire Wire Line
+	4000 1600 4075 1600
+Wire Wire Line
+	4100 1150 4125 1150
+Wire Wire Line
+	5525 1350 5850 1350
+Wire Wire Line
+	5850 1450 5850 1350
+Connection ~ 5850 1350
+Wire Wire Line
+	5850 1350 6175 1350
+Wire Wire Line
+	5525 1625 5525 1700
+Wire Wire Line
+	5850 1750 5850 1700
+Wire Wire Line
+	5850 1700 5525 1700
+Connection ~ 5850 1700
+Wire Wire Line
+	5850 1700 5850 1650
+Wire Wire Line
+	6175 1600 6175 1350
+Connection ~ 6175 1350
+Wire Wire Line
+	6175 1800 6175 1950
+Wire Wire Line
+	6175 1350 6500 1350
+Wire Wire Line
+	6500 1450 6500 1350
+Wire Wire Line
+	6500 1650 6500 1700
+Wire Wire Line
+	6500 1950 6500 1900
+Wire Wire Line
+	6450 1250 6500 1250
+Wire Wire Line
+	6500 1250 6500 1350
+Connection ~ 6500 1250
+Wire Wire Line
+	6500 1250 6550 1250
+Wire Notes Line
+	6825 525  6825 2350
+Wire Notes Line
+	525  2350 525  525 
+$Comp
+L Device:R_Small R22
+U 1 1 5C99CB3A
+P 1675 3525
+AR Path="/571758E7/5C99CB3A" Ref="R22"  Part="1" 
+AR Path="/5C99CB3A" Ref="R?"  Part="1" 
+F 0 "R22" H 1725 3575 50  0000 L CNN
+F 1 "470R" H 1725 3475 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 1675 3525 50  0001 C CNN
+F 3 "" H 1675 3525 50  0000 C CNN
+F 4 "125mW" H 25  -25 50  0001 C CNN "Power Rating"
+F 5 "5%" H 25  -25 50  0001 C CNN "Tolerance"
+	1    1675 3525
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:Led_Small LED5
+U 1 1 5C99CB41
+P 1675 3750
+AR Path="/571758E7/5C99CB41" Ref="LED5"  Part="1" 
+AR Path="/5C99CB41" Ref="LED?"  Part="1" 
+F 0 "LED5" V 1750 3775 50  0000 L CNN
+F 1 "U_PW" V 1600 3775 50  0000 L CNN
+F 2 "LEDs:LED_D5.0mm" V 1675 3750 50  0001 C CNN
+F 3 "" V 1675 3750 50  0000 C CNN
+	1    1675 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:F_Small F1
+U 1 1 5C99CB48
+P 1450 3350
+AR Path="/571758E7/5C99CB48" Ref="F1"  Part="1" 
+AR Path="/5C99CB48" Ref="F?"  Part="1" 
+F 0 "F1" H 1410 3410 50  0000 L CNN
+F 1 "500mA" H 1330 3290 50  0001 L CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_HandSoldering" H 1450 3350 50  0001 C CNN
+F 3 "" H 1450 3350 50  0000 C CNN
+	1    1450 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L conn:USB_B P1
+U 1 1 5C99CB51
+P 1000 3150
+AR Path="/571758E7/5C99CB51" Ref="P1"  Part="1" 
+AR Path="/5C99CB51" Ref="P?"  Part="1" 
+F 0 "P1" H 700 2900 50  0000 C CNN
+F 1 "USB_B" H 950 3500 50  0000 C CNN
+F 2 "Connect:USB_B" V 950 3050 50  0001 C CNN
+F 3 "" V 950 3050 50  0000 C CNN
+	1    1000 3150
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky D4
+U 1 1 5C99CB5A
+P 2475 3350
+AR Path="/571758E7/5C99CB5A" Ref="D4"  Part="1" 
+AR Path="/5C99CB5A" Ref="D?"  Part="1" 
+F 0 "D4" H 2475 3450 50  0000 C CNN
+F 1 "SKL14" H 2475 3250 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123F" H 2475 3350 50  0001 C CNN
+F 3 "" H 2475 3350 50  0000 C CNN
+F 4 "Schottky diode 1 A 40 V" H 2475 3350 60  0001 C CNN "Поле4"
+	1    2475 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small L2
+U 1 1 5C99CB69
+P 1975 3350
+AR Path="/571758E7/5C99CB69" Ref="L2"  Part="1" 
+AR Path="/5C99CB69" Ref="L?"  Part="1" 
+F 0 "L2" V 1850 3350 50  0000 C CNN
+F 1 "100Mhz 470ohm" V 2100 3300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 1975 3350 50  0001 C CNN
+F 3 "" H 1975 3350 50  0000 C CNN
+F 4 "" H 1975 3350 50  0001 C CNN "Field4"
+F 5 "Bead/100MHZ/470ohm/2A" H 0   0   50  0001 C CNN "Description"
+	1    1975 3350
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	1350 3350 1300 3350
+Wire Wire Line
+	2625 3350 2875 3350
+Wire Wire Line
+	2325 3350 2200 3350
+Connection ~ 2200 3350
+Wire Wire Line
+	1675 3350 1550 3350
+Wire Wire Line
+	1350 2750 1000 2750
+Wire Wire Line
+	900  2750 1000 2750
+$Comp
+L power:GND #PWR?
+U 1 1 5C99CB80
+P 1675 3850
+AR Path="/5C99CB80" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5C99CB80" Ref="#PWR033"  Part="1" 
+F 0 "#PWR033" H 1675 3600 50  0001 C CNN
+F 1 "GND" H 1675 3700 50  0000 C CNN
+F 2 "" H 1675 3850 50  0000 C CNN
+F 3 "" H 1675 3850 50  0000 C CNN
+	1    1675 3850
+	1    0    0    -1  
+$EndComp
+Connection ~ 1675 3350
+Wire Wire Line
+	1675 3350 1675 3425
+Wire Wire Line
+	1675 2925 1675 3350
+Wire Wire Line
+	1675 3350 1875 3350
+Wire Wire Line
+	2075 3350 2200 3350
+Wire Notes Line
+	525  2500 3075 2500
+Wire Notes Line
+	3075 2500 3075 4100
+Wire Notes Line
+	3075 4100 525  4100
+Wire Notes Line
+	525  4100 525  2500
+Text Notes 3450 2725 0    60   ~ 12
+DC/USB\nAutomatic power switching
+Wire Notes Line
+	3375 2500 6650 2500
+Wire Notes Line
+	6650 2500 6650 4100
+Wire Notes Line
+	6650 4100 3350 4100
+Wire Notes Line
+	3350 4100 3350 2500
+Text Notes 650  2625 0    60   ~ 12
+USB Power IN
+Wire Wire Line
+	4000 3575 4000 3625
+Wire Wire Line
+	4000 3625 4250 3625
+$Comp
+L Connector:TestPoint_Alt TP1
+U 1 1 5CD676FE
+P 1625 4700
+F 0 "TP1" H 1475 4900 50  0000 L CNN
+F 1 "3.3V" H 1650 4900 50  0000 L CNN
+F 2 "conn-test:TEST-SMD-SMALL" H 1825 4700 50  0001 C CNN
+F 3 "~" H 1825 4700 50  0001 C CNN
+	1    1625 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 4700 1625 4875
+$Comp
+L Device:C_Small C18
+U 1 1 5CD7B78D
+P 1625 5075
+F 0 "C18" H 1475 5150 50  0000 L CNN
+F 1 "100nF" H 1375 5000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1625 5075 50  0001 C CNN
+F 3 "" H 1625 5075 50  0000 C CNN
+F 4 "10%" H 1625 5075 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 1625 5075 50  0001 C CNN "Series"
+F 6 "25V" H 1625 5075 50  0001 C CNN "Voltage"
+	1    1625 5075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C15
+U 1 1 5CD7B841
+P 825 5075
+F 0 "C15" H 675 5150 50  0000 L CNN
+F 1 "10uF" H 600 5000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 825 5075 50  0001 C CNN
+F 3 "" H 825 5075 50  0000 C CNN
+F 4 "10%" H 825 5075 50  0001 C CNN "Tolerance"
+F 5 "X5R" H 825 5075 50  0001 C CNN "Series"
+F 6 "25V" H 825 5075 50  0001 C CNN "Voltage"
+	1    825  5075
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	525  4200 1925 4200
+Wire Notes Line
+	1925 4200 1925 5800
+Wire Notes Line
+	1925 5800 525  5800
+Wire Notes Line
+	525  5800 525  4200
+Text Notes 600  4325 0    60   ~ 12
+LDO Regulator 3.3V
+$Comp
+L Device:C C?
+U 1 1 5C137D1C
+P 2425 5150
+AR Path="/5C137D1C" Ref="C?"  Part="1" 
+AR Path="/571758E7/5C137D1C" Ref="C21"  Part="1" 
+F 0 "C21" H 2250 5250 50  0000 L CNN
+F 1 "100n" H 2225 5050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2463 5000 50  0001 C CNN
+F 3 "" H 2425 5150 50  0000 C CNN
+F 4 "10%" H 2425 5150 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 2425 5150 50  0001 C CNN "Series"
+F 6 "25V" H 2425 5150 50  0001 C CNN "Voltage"
+	1    2425 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5CDB5209
+P 3325 5350
+AR Path="/5CDB5209" Ref="C?"  Part="1" 
+AR Path="/571758E7/5CDB5209" Ref="C23"  Part="1" 
+F 0 "C23" H 3150 5450 50  0000 L CNN
+F 1 "100n" H 3125 5250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3363 5200 50  0001 C CNN
+F 3 "" H 3325 5350 50  0000 C CNN
+F 4 "10%" H 3325 5350 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 3325 5350 50  0001 C CNN "Series"
+F 6 "25V" H 3325 5350 50  0001 C CNN "Voltage"
+	1    3325 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2875 4675 2875 4800
+Wire Wire Line
+	2875 4800 2425 4800
+Wire Wire Line
+	2425 4800 2425 5000
+Connection ~ 2875 4800
+Wire Wire Line
+	2875 4800 2875 4850
+Wire Notes Line
+	2125 4200 3625 4200
+Text Notes 2225 4450 0    60   ~ 12
+4.096V Precision Voltage \nReference
+Wire Notes Line
+	3625 4200 3625 5800
+Wire Notes Line
+	3625 5800 2125 5800
+Wire Notes Line
+	2125 5800 2125 4200
+Wire Wire Line
+	2150 1250 2150 1300
+Text Notes 7150 750  0    60   ~ 12
+USB 2.0 HUB ports\n1-4 Power ports
+Wire Notes Line
+	11075 5075 11075 525 
+Wire Notes Line
+	7075 5075 11075 5075
+Wire Notes Line
+	7075 525  7075 5075
+Wire Notes Line
+	11075 525  7075 525 
+Wire Wire Line
+	9950 4125 10050 4125
+Wire Wire Line
+	9950 4200 9950 4125
+Wire Wire Line
+	9950 3075 10050 3075
+Wire Wire Line
+	9950 3150 9950 3075
+Wire Wire Line
+	8075 4875 7925 4875
+Wire Wire Line
+	7925 4875 7800 4875
+Connection ~ 7925 4875
+$Comp
+L power:GND #PWR063
+U 1 1 5EDC3B32
+P 7925 4875
+F 0 "#PWR063" H 7925 4625 50  0001 C CNN
+F 1 "GND" H 8000 4725 50  0000 C CNN
+F 2 "" H 7925 4875 50  0000 C CNN
+F 3 "" H 7925 4875 50  0000 C CNN
+	1    7925 4875
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 4875 7800 4850
+Wire Wire Line
+	8075 4850 8075 4875
+Wire Wire Line
+	8075 4650 8075 4600
+Wire Wire Line
+	7650 4600 7800 4600
+Wire Wire Line
+	8075 4600 7800 4600
+Connection ~ 7800 4600
+Wire Wire Line
+	7800 4600 7800 4650
+Connection ~ 8075 4600
+Wire Wire Line
+	8450 4600 8075 4600
+$Comp
+L Device:C_Small C36
+U 1 1 5EDC3B44
+P 7800 4750
+F 0 "C36" H 7650 4825 50  0000 L CNN
+F 1 "1nF" H 7650 4675 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7800 4750 50  0001 C CNN
+F 3 "" H 7800 4750 50  0000 C CNN
+F 4 "10%" H 7800 4750 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 7800 4750 50  0001 C CNN "Series"
+F 6 "25V" H 7800 4750 50  0001 C CNN "Voltage"
+	1    7800 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R40
+U 1 1 5EDC3B4D
+P 8075 4750
+F 0 "R40" H 7950 4800 50  0000 C CNN
+F 1 "1K" H 7975 4700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8005 4750 50  0001 C CNN
+F 3 "" H 8075 4750 50  0000 C CNN
+F 4 "125mW" H 4500 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 4500 25  50  0001 C CNN "Tolerance"
+	1    8075 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7975 4350 8175 4350
+Wire Wire Line
+	7975 4400 7975 4350
+$Comp
+L power:GND #PWR068
+U 1 1 5EDC3B56
+P 7975 4400
+F 0 "#PWR068" H 7975 4150 50  0001 C CNN
+F 1 "GND" H 7975 4250 50  0000 C CNN
+F 2 "" H 7975 4400 50  0000 C CNN
+F 3 "" H 7975 4400 50  0000 C CNN
+	1    7975 4400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4075 8550 3950
+Wire Wire Line
+	8400 4075 8550 4075
+Wire Wire Line
+	8400 4350 8400 4075
+$Comp
+L Device:C_Small C40
+U 1 1 5EDC3B65
+P 8275 4350
+F 0 "C40" V 8325 4400 50  0000 L CNN
+F 1 "100nF" V 8225 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8275 4350 50  0001 C CNN
+F 3 "" H 8275 4350 50  0000 C CNN
+F 4 "10%" H 8275 4350 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 8275 4350 50  0001 C CNN "Series"
+F 6 "25V" H 8275 4350 50  0001 C CNN "Voltage"
+	1    8275 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9100 4575 9850 4575
+Wire Wire Line
+	8550 3950 8800 3950
+Connection ~ 8550 3950
+Wire Wire Line
+	8550 3925 8550 3950
+Wire Wire Line
+	8450 4150 8150 4150
+Wire Wire Line
+	8525 3950 8550 3950
+Wire Wire Line
+	9850 4575 9850 4600
+Connection ~ 9850 4575
+Wire Wire Line
+	9850 4550 9850 4575
+Wire Wire Line
+	9100 3950 9100 4150
+$Comp
+L Device:R_Small R45
+U 1 1 5EDC3B7F
+P 8425 3950
+F 0 "R45" V 8475 4100 50  0000 C CNN
+F 1 "100R" V 8375 4125 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8355 3950 50  0001 C CNN
+F 3 "" H 8425 3950 50  0000 C CNN
+F 4 "125mW" H 5025 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 5025 25  50  0001 C CNN "Tolerance"
+	1    8425 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9000 3950 9100 3950
+$Comp
+L Device:R_Small R49
+U 1 1 5EDC3B89
+P 8900 3950
+F 0 "R49" V 8950 4125 50  0000 C CNN
+F 1 "0.02R" V 8850 4150 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8830 3950 50  0001 C CNN
+F 3 "" H 8900 3950 50  0000 C CNN
+F 4 "125mW" H 6000 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 6000 25  50  0001 C CNN "Tolerance"
+	1    8900 3950
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9100 3950
+Wire Wire Line
+	9825 3950 9100 3950
+Wire Wire Line
+	9825 4100 9825 3950
+Wire Wire Line
+	9800 4100 9825 4100
+Wire Wire Line
+	9100 4350 9100 4575
+$Comp
+L 6xUSB_PowMet-rescue:LT6106 U13
+U 1 1 5EDC3B9A
+P 8800 4400
+F 0 "U13" H 8650 4750 60  0000 L CNN
+F 1 "LT6106" H 8650 4100 60  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 9050 4400 60  0001 C CNN
+F 3 "" H 9050 4400 60  0000 C CNN
+F 4 "LT6106IS5#TRMPBF" H 8800 4400 50  0001 C CNN "Part Number"
+F 5 "Analog Devices" H 8800 4400 50  0001 C CNN "Manufacturerer"
+F 6 "SP Amp Current Sense Amp Single 36V Automotive 5-Pin TSOT-23 T/R" H 8800 4400 50  0001 C CNN "Description"
+	1    8800 4400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR078
+U 1 1 5EDC3BA1
+P 9850 4600
+F 0 "#PWR078" H 9850 4350 50  0001 C CNN
+F 1 "GND" H 9850 4450 50  0000 C CNN
+F 2 "" H 9850 4600 50  0000 C CNN
+F 3 "" H 9850 4600 50  0000 C CNN
+	1    9850 4600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 4200 9950 4200
+Wire Wire Line
+	9850 4350 9850 4200
+$Comp
+L Device:C_Small C45
+U 1 1 5EDC3BAC
+P 9850 4450
+F 0 "C45" H 9675 4525 50  0000 L CNN
+F 1 "10uF" H 9650 4375 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9850 4450 50  0001 C CNN
+F 3 "" H 9850 4450 50  0000 C CNN
+F 4 "10%" H 9850 4450 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 9850 4450 50  0001 C CNN "Series"
+F 6 "25V" H 9850 4450 50  0001 C CNN "Voltage"
+	1    9850 4450
+	1    0    0    -1  
+$EndComp
+Connection ~ 9850 4200
+Wire Wire Line
+	9800 4200 9850 4200
+$Comp
+L 6xUSB_PowMet-rescue:P-CHAN-MOSFET_SOT Q9
+U 1 1 5EDC3BB8
+P 9650 4150
+F 0 "Q9" H 9650 4025 60  0000 C CNN
+F 1 "IRLML6401" H 9575 4300 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 9650 4150 60  0001 C CNN
+F 3 "https://www.elfadistrelec.lv/Web/Downloads/1_/en/zmint_RECTIFIER_FET-Trans-IRLML6401_EN.pdf?mime=application%2Fpdf" H 9650 4150 60  0001 C CNN
+F 4 "IRLML6401GTRPBF" H 9650 4150 50  0001 C CNN "Part Number"
+F 5 "Infineon Technologies AG" H 9650 4150 50  0001 C CNN "Manufacturerer"
+F 6 "Trans MOSFET P-CH Si 12V 4.3A 3-Pin SOT-23 T/R" H 9650 4150 50  0001 C CNN "Description"
+	1    9650 4150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8075 3825 7925 3825
+Wire Wire Line
+	7925 3825 7800 3825
+Connection ~ 7925 3825
+$Comp
+L power:GND #PWR062
+U 1 1 5EDC3BC3
+P 7925 3825
+F 0 "#PWR062" H 7925 3575 50  0001 C CNN
+F 1 "GND" H 7925 3675 50  0000 C CNN
+F 2 "" H 7925 3825 50  0000 C CNN
+F 3 "" H 7925 3825 50  0000 C CNN
+	1    7925 3825
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3825 7800 3800
+Wire Wire Line
+	8075 3800 8075 3825
+Wire Wire Line
+	8075 3600 8075 3550
+Wire Wire Line
+	7650 3550 7800 3550
+Wire Wire Line
+	8075 3550 7800 3550
+Connection ~ 7800 3550
+Wire Wire Line
+	7800 3550 7800 3600
+Connection ~ 8075 3550
+Wire Wire Line
+	8450 3550 8075 3550
+$Comp
+L Device:C_Small C35
+U 1 1 5EDC3BD5
+P 7800 3700
+F 0 "C35" H 7650 3775 50  0000 L CNN
+F 1 "1nF" H 7650 3625 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7800 3700 50  0001 C CNN
+F 3 "" H 7800 3700 50  0000 C CNN
+F 4 "10%" H 7800 3700 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 7800 3700 50  0001 C CNN "Series"
+F 6 "25V" H 7800 3700 50  0001 C CNN "Voltage"
+	1    7800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R39
+U 1 1 5EDC3BDE
+P 8075 3700
+F 0 "R39" H 7950 3750 50  0000 C CNN
+F 1 "1K" H 7975 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8005 3700 50  0001 C CNN
+F 3 "" H 8075 3700 50  0000 C CNN
+F 4 "125mW" H 4500 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 4500 25  50  0001 C CNN "Tolerance"
+	1    8075 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7975 3300 8150 3300
+Wire Wire Line
+	7975 3350 7975 3300
+$Comp
+L power:GND #PWR067
+U 1 1 5EDC3BE7
+P 7975 3350
+F 0 "#PWR067" H 7975 3100 50  0001 C CNN
+F 1 "GND" H 7975 3200 50  0000 C CNN
+F 2 "" H 7975 3350 50  0000 C CNN
+F 3 "" H 7975 3350 50  0000 C CNN
+	1    7975 3350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 3300 8450 3300
+Wire Wire Line
+	8550 3025 8550 2900
+Wire Wire Line
+	8400 3025 8550 3025
+Wire Wire Line
+	8400 3300 8400 3025
+Connection ~ 8400 3300
+Wire Wire Line
+	8350 3300 8400 3300
+$Comp
+L Device:C_Small C39
+U 1 1 5EDC3BF6
+P 8250 3300
+F 0 "C39" V 8300 3350 50  0000 L CNN
+F 1 "100nF" V 8200 3325 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8250 3300 50  0001 C CNN
+F 3 "" H 8250 3300 50  0000 C CNN
+F 4 "10%" H 8250 3300 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 8250 3300 50  0001 C CNN "Series"
+F 6 "25V" H 8250 3300 50  0001 C CNN "Voltage"
+	1    8250 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9100 3525 9850 3525
+Wire Wire Line
+	8550 2900 8800 2900
+Connection ~ 8550 2900
+Wire Wire Line
+	8550 2875 8550 2900
+Wire Wire Line
+	8450 3100 8150 3100
+Wire Wire Line
+	8525 2900 8550 2900
+Wire Wire Line
+	9850 3525 9850 3550
+Connection ~ 9850 3525
+Wire Wire Line
+	9850 3500 9850 3525
+Wire Wire Line
+	9100 2900 9100 3100
+$Comp
+L Device:R_Small R44
+U 1 1 5EDC3C10
+P 8425 2900
+F 0 "R44" V 8475 3050 50  0000 C CNN
+F 1 "100R" V 8375 3075 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8355 2900 50  0001 C CNN
+F 3 "" H 8425 2900 50  0000 C CNN
+F 4 "125mW" H 5025 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 5025 25  50  0001 C CNN "Tolerance"
+	1    8425 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9000 2900 9100 2900
+$Comp
+L Device:R_Small R48
+U 1 1 5EDC3C1A
+P 8900 2900
+F 0 "R48" V 8950 3050 50  0000 C CNN
+F 1 "0.02R" V 8850 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8830 2900 50  0001 C CNN
+F 3 "" H 8900 2900 50  0000 C CNN
+F 4 "125mW" H 6000 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 6000 25  50  0001 C CNN "Tolerance"
+	1    8900 2900
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9100 2900
+Wire Wire Line
+	9825 2900 9100 2900
+Wire Wire Line
+	9825 3050 9825 2900
+Wire Wire Line
+	9800 3050 9825 3050
+Wire Wire Line
+	9100 3300 9100 3525
+$Comp
+L 6xUSB_PowMet-rescue:LT6106 U12
+U 1 1 5EDC3C2B
+P 8800 3350
+F 0 "U12" H 8650 3700 60  0000 L CNN
+F 1 "LT6106" H 8675 3050 60  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 9050 3350 60  0001 C CNN
+F 3 "" H 9050 3350 60  0000 C CNN
+F 4 "LT6106IS5#TRMPBF" H 8800 3350 50  0001 C CNN "Part Number"
+F 5 "Analog Devices" H 8800 3350 50  0001 C CNN "Manufacturerer"
+F 6 "SP Amp Current Sense Amp Single 36V Automotive 5-Pin TSOT-23 T/R" H 8800 3350 50  0001 C CNN "Description"
+	1    8800 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR077
+U 1 1 5EDC3C32
+P 9850 3550
+F 0 "#PWR077" H 9850 3300 50  0001 C CNN
+F 1 "GND" H 9850 3400 50  0000 C CNN
+F 2 "" H 9850 3550 50  0000 C CNN
+F 3 "" H 9850 3550 50  0000 C CNN
+	1    9850 3550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 3150 9950 3150
+Wire Wire Line
+	9850 3300 9850 3150
+$Comp
+L Device:C_Small C44
+U 1 1 5EDC3C3D
+P 9850 3400
+F 0 "C44" H 9675 3475 50  0000 L CNN
+F 1 "10uF" H 9650 3325 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9850 3400 50  0001 C CNN
+F 3 "" H 9850 3400 50  0000 C CNN
+F 4 "10%" H 9850 3400 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 9850 3400 50  0001 C CNN "Series"
+F 6 "25V" H 9850 3400 50  0001 C CNN "Voltage"
+	1    9850 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 9850 3150
+Wire Wire Line
+	9800 3150 9850 3150
+$Comp
+L 6xUSB_PowMet-rescue:P-CHAN-MOSFET_SOT Q8
+U 1 1 5EDC3C49
+P 9650 3100
+F 0 "Q8" H 9650 2975 60  0000 C CNN
+F 1 "IRLML6401" H 9575 3250 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 9650 3100 60  0001 C CNN
+F 3 "https://www.elfadistrelec.lv/Web/Downloads/1_/en/zmint_RECTIFIER_FET-Trans-IRLML6401_EN.pdf?mime=application%2Fpdf" H 9650 3100 60  0001 C CNN
+F 4 "IRLML6401GTRPBF" H 9650 3100 50  0001 C CNN "Part Number"
+F 5 "Infineon Technologies AG" H 9650 3100 50  0001 C CNN "Manufacturerer"
+F 6 "Trans MOSFET P-CH Si 12V 4.3A 3-Pin SOT-23 T/R" H 9650 3100 50  0001 C CNN "Description"
+	1    9650 3100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8075 2775 7925 2775
+Wire Wire Line
+	7925 2775 7800 2775
+Connection ~ 7925 2775
+$Comp
+L power:GND #PWR061
+U 1 1 5EDC3C54
+P 7925 2775
+F 0 "#PWR061" H 7925 2525 50  0001 C CNN
+F 1 "GND" H 7925 2625 50  0000 C CNN
+F 2 "" H 7925 2775 50  0000 C CNN
+F 3 "" H 7925 2775 50  0000 C CNN
+	1    7925 2775
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 2775 7800 2750
+Wire Wire Line
+	8075 2750 8075 2775
+Wire Wire Line
+	8075 2550 8075 2500
+Wire Wire Line
+	7650 2500 7800 2500
+Wire Wire Line
+	8075 2500 7800 2500
+Connection ~ 7800 2500
+Wire Wire Line
+	7800 2500 7800 2550
+Connection ~ 8075 2500
+Wire Wire Line
+	8450 2500 8075 2500
+$Comp
+L Device:C_Small C34
+U 1 1 5EDC3C66
+P 7800 2650
+F 0 "C34" H 7650 2725 50  0000 L CNN
+F 1 "1nF" H 7650 2575 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7800 2650 50  0001 C CNN
+F 3 "" H 7800 2650 50  0000 C CNN
+F 4 "10%" H 7800 2650 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 7800 2650 50  0001 C CNN "Series"
+F 6 "25V" H 7800 2650 50  0001 C CNN "Voltage"
+	1    7800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R38
+U 1 1 5EDC3C6F
+P 8075 2650
+F 0 "R38" H 7950 2700 50  0000 C CNN
+F 1 "1K" H 7975 2600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8005 2650 50  0001 C CNN
+F 3 "" H 8075 2650 50  0000 C CNN
+F 4 "125mW" H 4500 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 4500 25  50  0001 C CNN "Tolerance"
+	1    8075 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2250 8175 2250
+Wire Wire Line
+	8000 2300 8000 2250
+$Comp
+L power:GND #PWR066
+U 1 1 5EDC3C78
+P 8000 2300
+F 0 "#PWR066" H 8000 2050 50  0001 C CNN
+F 1 "GND" H 8000 2150 50  0000 C CNN
+F 2 "" H 8000 2300 50  0000 C CNN
+F 3 "" H 8000 2300 50  0000 C CNN
+	1    8000 2300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 2250 8450 2250
+Wire Wire Line
+	8550 1975 8550 1850
+Wire Wire Line
+	8400 1975 8550 1975
+Wire Wire Line
+	8400 2250 8400 1975
+Connection ~ 8400 2250
+Wire Wire Line
+	8375 2250 8400 2250
+$Comp
+L Device:C_Small C38
+U 1 1 5EDC3C87
+P 8275 2250
+F 0 "C38" V 8325 2300 50  0000 L CNN
+F 1 "100nF" V 8225 2275 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8275 2250 50  0001 C CNN
+F 3 "" H 8275 2250 50  0000 C CNN
+F 4 "10%" H 8275 2250 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 8275 2250 50  0001 C CNN "Series"
+F 6 "25V" H 8275 2250 50  0001 C CNN "Voltage"
+	1    8275 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9100 2475 9850 2475
+Wire Wire Line
+	8550 1850 8800 1850
+Connection ~ 8550 1850
+Wire Wire Line
+	8550 1825 8550 1850
+Wire Wire Line
+	8450 2050 8150 2050
+Wire Wire Line
+	8525 1850 8550 1850
+Wire Wire Line
+	9850 2475 9850 2500
+Connection ~ 9850 2475
+Wire Wire Line
+	9850 2450 9850 2475
+Wire Wire Line
+	9100 1850 9100 2050
+$Comp
+L Device:R_Small R43
+U 1 1 5EDC3CA1
+P 8425 1850
+F 0 "R43" V 8475 2000 50  0000 C CNN
+F 1 "100R" V 8375 2025 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8355 1850 50  0001 C CNN
+F 3 "" H 8425 1850 50  0000 C CNN
+F 4 "125mW" H 5025 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 5025 25  50  0001 C CNN "Tolerance"
+	1    8425 1850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9000 1850 9100 1850
+$Comp
+L Device:R_Small R47
+U 1 1 5EDC3CAB
+P 8900 1850
+F 0 "R47" V 8950 2000 50  0000 C CNN
+F 1 "0.02R" V 8850 2050 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8830 1850 50  0001 C CNN
+F 3 "" H 8900 1850 50  0000 C CNN
+F 4 "125mW" H 6000 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 6000 25  50  0001 C CNN "Tolerance"
+	1    8900 1850
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9100 1850
+Wire Wire Line
+	9825 1850 9100 1850
+Wire Wire Line
+	9825 2000 9825 1850
+Wire Wire Line
+	9800 2000 9825 2000
+Wire Wire Line
+	9100 2250 9100 2475
+$Comp
+L 6xUSB_PowMet-rescue:LT6106 U11
+U 1 1 5EDC3CBC
+P 8800 2300
+F 0 "U11" H 8650 2650 60  0000 L CNN
+F 1 "LT6106" H 8675 2000 60  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 9050 2300 60  0001 C CNN
+F 3 "" H 9050 2300 60  0000 C CNN
+F 4 "LT6106IS5#TRMPBF" H 8800 2300 50  0001 C CNN "Part Number"
+F 5 "Analog Devices" H 8800 2300 50  0001 C CNN "Manufacturerer"
+F 6 "SP Amp Current Sense Amp Single 36V Automotive 5-Pin TSOT-23 T/R" H 8800 2300 50  0001 C CNN "Description"
+	1    8800 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR076
+U 1 1 5EDC3CC3
+P 9850 2500
+F 0 "#PWR076" H 9850 2250 50  0001 C CNN
+F 1 "GND" H 9850 2350 50  0000 C CNN
+F 2 "" H 9850 2500 50  0000 C CNN
+F 3 "" H 9850 2500 50  0000 C CNN
+	1    9850 2500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 2100 9950 2100
+Wire Wire Line
+	9850 2250 9850 2100
+$Comp
+L Device:C_Small C43
+U 1 1 5EDC3CCE
+P 9850 2350
+F 0 "C43" H 9675 2425 50  0000 L CNN
+F 1 "10uF" H 9650 2275 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9850 2350 50  0001 C CNN
+F 3 "" H 9850 2350 50  0000 C CNN
+F 4 "10%" H 9850 2350 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 9850 2350 50  0001 C CNN "Series"
+F 6 "25V" H 9850 2350 50  0001 C CNN "Voltage"
+	1    9850 2350
+	1    0    0    -1  
+$EndComp
+Connection ~ 9850 2100
+Wire Wire Line
+	9800 2100 9850 2100
+$Comp
+L 6xUSB_PowMet-rescue:P-CHAN-MOSFET_SOT Q7
+U 1 1 5EDC3CDA
+P 9650 2050
+F 0 "Q7" H 9650 1925 60  0000 C CNN
+F 1 "IRLML6401" H 9575 2200 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 9650 2050 60  0001 C CNN
+F 3 "https://www.elfadistrelec.lv/Web/Downloads/1_/en/zmint_RECTIFIER_FET-Trans-IRLML6401_EN.pdf?mime=application%2Fpdf" H 9650 2050 60  0001 C CNN
+F 4 "IRLML6401GTRPBF" H 9650 2050 50  0001 C CNN "Part Number"
+F 5 "Infineon Technologies AG" H 9650 2050 50  0001 C CNN "Manufacturerer"
+F 6 "Trans MOSFET P-CH Si 12V 4.3A 3-Pin SOT-23 T/R" H 9650 2050 50  0001 C CNN "Description"
+	1    9650 2050
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9950 2025 9950 2100
+Wire Wire Line
+	10050 2025 9950 2025
+Wire Wire Line
+	9950 1050 9950 975 
+Wire Wire Line
+	8075 1725 7925 1725
+Wire Wire Line
+	7925 1725 7800 1725
+Connection ~ 7925 1725
+$Comp
+L power:GND #PWR060
+U 1 1 5EDC3CE8
+P 7925 1725
+F 0 "#PWR060" H 7925 1475 50  0001 C CNN
+F 1 "GND" H 7925 1575 50  0000 C CNN
+F 2 "" H 7925 1725 50  0000 C CNN
+F 3 "" H 7925 1725 50  0000 C CNN
+	1    7925 1725
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1725 7800 1700
+Wire Wire Line
+	8075 1700 8075 1725
+Wire Wire Line
+	8075 1500 8075 1450
+Wire Wire Line
+	7650 1450 7800 1450
+Wire Wire Line
+	8075 1450 7800 1450
+Connection ~ 7800 1450
+Wire Wire Line
+	7800 1450 7800 1500
+Connection ~ 8075 1450
+Wire Wire Line
+	8450 1450 8075 1450
+$Comp
+L Device:C_Small C33
+U 1 1 5EDC3CFA
+P 7800 1600
+F 0 "C33" H 7650 1675 50  0000 L CNN
+F 1 "1nF" H 7650 1525 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7800 1600 50  0001 C CNN
+F 3 "" H 7800 1600 50  0000 C CNN
+F 4 "10%" H 7800 1600 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 7800 1600 50  0001 C CNN "Series"
+F 6 "25V" H 7800 1600 50  0001 C CNN "Voltage"
+	1    7800 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R37
+U 1 1 5EDC3D03
+P 8075 1600
+F 0 "R37" H 7950 1650 50  0000 C CNN
+F 1 "1K" H 7975 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8005 1600 50  0001 C CNN
+F 3 "" H 8075 1600 50  0000 C CNN
+F 4 "125mW" H 4500 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 4500 25  50  0001 C CNN "Tolerance"
+	1    8075 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1200 8175 1200
+Wire Wire Line
+	8000 1250 8000 1200
+$Comp
+L power:GND #PWR065
+U 1 1 5EDC3D0C
+P 8000 1250
+F 0 "#PWR065" H 8000 1000 50  0001 C CNN
+F 1 "GND" H 8000 1100 50  0000 C CNN
+F 2 "" H 8000 1250 50  0000 C CNN
+F 3 "" H 8000 1250 50  0000 C CNN
+	1    8000 1250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 1200 8450 1200
+Wire Wire Line
+	8550 925  8550 800 
+Wire Wire Line
+	8400 925  8550 925 
+Wire Wire Line
+	8400 1200 8400 925 
+Connection ~ 8400 1200
+Wire Wire Line
+	8375 1200 8400 1200
+$Comp
+L Device:C_Small C37
+U 1 1 5EDC3D1B
+P 8275 1200
+F 0 "C37" V 8325 1250 50  0000 L CNN
+F 1 "100nF" V 8225 1225 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8275 1200 50  0001 C CNN
+F 3 "" H 8275 1200 50  0000 C CNN
+F 4 "10%" H 8275 1200 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 8275 1200 50  0001 C CNN "Series"
+F 6 "25V" H 8275 1200 50  0001 C CNN "Voltage"
+	1    8275 1200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9100 1425 9850 1425
+Wire Wire Line
+	8550 800  8800 800 
+Connection ~ 8550 800 
+Wire Wire Line
+	8550 775  8550 800 
+Wire Wire Line
+	8450 1000 8150 1000
+Wire Wire Line
+	8525 800  8550 800 
+Wire Wire Line
+	9850 1425 9850 1450
+Connection ~ 9850 1425
+Wire Wire Line
+	9850 1400 9850 1425
+Wire Wire Line
+	9100 800  9100 1000
+$Comp
+L Device:R_Small R42
+U 1 1 5EDC3D35
+P 8425 800
+F 0 "R42" V 8475 950 50  0000 C CNN
+F 1 "100R" V 8375 975 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8355 800 50  0001 C CNN
+F 3 "" H 8425 800 50  0000 C CNN
+F 4 "125mW" H 5025 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 5025 25  50  0001 C CNN "Tolerance"
+	1    8425 800 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9000 800  9100 800 
+$Comp
+L Device:R_Small R46
+U 1 1 5EDC3D3F
+P 8900 800
+F 0 "R46" V 8950 975 50  0000 C CNN
+F 1 "0.02R" V 8850 975 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8830 800 50  0001 C CNN
+F 3 "" H 8900 800 50  0000 C CNN
+F 4 "125mW" H 6000 25  50  0001 C CNN "Power Rating"
+F 5 "1%" H 6000 25  50  0001 C CNN "Tolerance"
+	1    8900 800 
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9100 800 
+Wire Wire Line
+	9825 800  9100 800 
+Wire Wire Line
+	9825 950  9825 800 
+Wire Wire Line
+	9800 950  9825 950 
+Wire Wire Line
+	9100 1200 9100 1425
+$Comp
+L 6xUSB_PowMet-rescue:LT6106 U10
+U 1 1 5EDC3D50
+P 8800 1250
+F 0 "U10" H 8575 1600 60  0000 L CNN
+F 1 "LT6106" H 8650 950 60  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 9050 1250 60  0001 C CNN
+F 3 "" H 9050 1250 60  0000 C CNN
+F 4 "LT6106IS5#TRMPBF" H 8800 1250 50  0001 C CNN "Part Number"
+F 5 "Analog Devices" H 8800 1250 50  0001 C CNN "Manufacturerer"
+F 6 "SP Amp Current Sense Amp Single 36V Automotive 5-Pin TSOT-23 T/R" H 8800 1250 50  0001 C CNN "Description"
+	1    8800 1250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR075
+U 1 1 5EDC3D57
+P 9850 1450
+F 0 "#PWR075" H 9850 1200 50  0001 C CNN
+F 1 "GND" H 9850 1300 50  0000 C CNN
+F 2 "" H 9850 1450 50  0000 C CNN
+F 3 "" H 9850 1450 50  0000 C CNN
+	1    9850 1450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 1050 9950 1050
+Wire Wire Line
+	9850 1200 9850 1050
+$Comp
+L Device:C_Small C42
+U 1 1 5EDC3D62
+P 9850 1300
+F 0 "C42" H 9700 1375 50  0000 L CNN
+F 1 "10uF" H 9650 1225 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9850 1300 50  0001 C CNN
+F 3 "" H 9850 1300 50  0000 C CNN
+F 4 "10%" H 9850 1300 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 9850 1300 50  0001 C CNN "Series"
+F 6 "25V" H 9850 1300 50  0001 C CNN "Voltage"
+	1    9850 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 975  10050 975 
+Connection ~ 9850 1050
+Wire Wire Line
+	9800 1050 9850 1050
+$Comp
+L 6xUSB_PowMet-rescue:P-CHAN-MOSFET_SOT Q6
+U 1 1 5EDC3D6F
+P 9650 1000
+F 0 "Q6" H 9650 875 60  0000 C CNN
+F 1 "IRLML6401" H 9575 1150 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 9650 1000 60  0001 C CNN
+F 3 "https://www.elfadistrelec.lv/Web/Downloads/1_/en/zmint_RECTIFIER_FET-Trans-IRLML6401_EN.pdf?mime=application%2Fpdf" H 9650 1000 60  0001 C CNN
+F 4 "IRLML6401GTRPBF" H 9650 1000 50  0001 C CNN "Part Number"
+F 5 "Infineon Technologies AG" H 9650 1000 50  0001 C CNN "Manufacturerer"
+F 6 "Trans MOSFET P-CH Si 12V 4.3A 3-Pin SOT-23 T/R" H 9650 1000 50  0001 C CNN "Description"
+	1    9650 1000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	10250 4125 10325 4125
+$Comp
+L 6xUSB_PowMet-rescue:F_Small F7
+U 1 1 5EDC3D7A
+P 10150 4125
+F 0 "F7" H 10100 4200 50  0000 L CNN
+F 1 "F_Small" H 10030 4065 50  0001 L CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_Wave" H 10150 4125 50  0001 C CNN
+F 3 "http://static6.arrow.com/aropdfconversion/4753f739437b5c064b4592bb4553dc3d333a28ff/42396985575069960c1s.pdf" H 10150 4125 50  0001 C CNN
+F 4 "C1S 3.5" H 10150 4125 50  0001 C CNN "Part Number"
+F 5 "BEL Group" H 10150 4125 50  0001 C CNN "Manufacturerer"
+F 6 "Fuse Chip Slow Blow Acting 3.5A 63V SMD Solder Pad 1206 Ceramic CE/cULus" H 10150 4125 50  0001 C CNN "Description"
+	1    10150 4125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 3075 10325 3075
+$Comp
+L 6xUSB_PowMet-rescue:F_Small F6
+U 1 1 5EDC3D85
+P 10150 3075
+F 0 "F6" H 10100 3150 50  0000 L CNN
+F 1 "F_Small" H 10030 3015 50  0001 L CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_Wave" H 10150 3075 50  0001 C CNN
+F 3 "http://static6.arrow.com/aropdfconversion/4753f739437b5c064b4592bb4553dc3d333a28ff/42396985575069960c1s.pdf" H 10150 3075 50  0001 C CNN
+F 4 "C1S 3.5" H 10150 3075 50  0001 C CNN "Part Number"
+F 5 "BEL Group" H 10150 3075 50  0001 C CNN "Manufacturerer"
+F 6 "Fuse Chip Slow Blow Acting 3.5A 63V SMD Solder Pad 1206 Ceramic CE/cULus" H 10150 3075 50  0001 C CNN "Description"
+	1    10150 3075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 2025 10325 2025
+$Comp
+L 6xUSB_PowMet-rescue:F_Small F5
+U 1 1 5EDC3D90
+P 10150 2025
+F 0 "F5" H 10100 2100 50  0000 L CNN
+F 1 "F_Small" H 10030 1965 50  0001 L CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_Wave" H 10150 2025 50  0001 C CNN
+F 3 "http://static6.arrow.com/aropdfconversion/4753f739437b5c064b4592bb4553dc3d333a28ff/42396985575069960c1s.pdf" H 10150 2025 50  0001 C CNN
+F 4 "C1S 3.5" H 10150 2025 50  0001 C CNN "Part Number"
+F 5 "BEL Group" H 10150 2025 50  0001 C CNN "Manufacturerer"
+F 6 "Fuse Chip Slow Blow Acting 3.5A 63V SMD Solder Pad 1206 Ceramic CE/cULus" H 10150 2025 50  0001 C CNN "Description"
+	1    10150 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 975  10325 975 
+$Comp
+L power:GND #PWR082
+U 1 1 5EDC3DB0
+P 10625 4725
+F 0 "#PWR082" H 10625 4475 50  0001 C CNN
+F 1 "GND" H 10625 4575 50  0000 C CNN
+F 2 "" H 10625 4725 50  0000 C CNN
+F 3 "" H 10625 4725 50  0000 C CNN
+	1    10625 4725
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR081
+U 1 1 5EDC3DB6
+P 10625 3675
+F 0 "#PWR081" H 10625 3425 50  0001 C CNN
+F 1 "GND" H 10625 3525 50  0000 C CNN
+F 2 "" H 10625 3675 50  0000 C CNN
+F 3 "" H 10625 3675 50  0000 C CNN
+	1    10625 3675
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR080
+U 1 1 5EDC3DBC
+P 10625 2625
+F 0 "#PWR080" H 10625 2375 50  0001 C CNN
+F 1 "GND" H 10625 2475 50  0000 C CNN
+F 2 "" H 10625 2625 50  0000 C CNN
+F 3 "" H 10625 2625 50  0000 C CNN
+	1    10625 2625
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR079
+U 1 1 5EDC3DC2
+P 10625 1575
+F 0 "#PWR079" H 10625 1325 50  0001 C CNN
+F 1 "GND" H 10625 1425 50  0000 C CNN
+F 2 "" H 10625 1575 50  0000 C CNN
+F 3 "" H 10625 1575 50  0000 C CNN
+	1    10625 1575
+	-1   0    0    -1  
+$EndComp
+$Comp
+L conn:USB_A P9
+U 1 1 5EDC3DCB
+P 10625 4325
+F 0 "P9" H 10350 4575 50  0000 C CNN
+F 1 "USB_A" H 10525 4675 50  0000 C CNN
+F 2 "USB-A_vertical1:USB_A_Vertical" V 10575 4225 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/445/614004184726-910114.pdf" V 10575 4225 50  0001 C CNN
+F 4 "614004184726" H 10625 4325 50  0001 C CNN "Part Number"
+F 5 "Wurth Electronics" H 10625 4325 50  0001 C CNN "Manufacturerer"
+F 6 "USB Connectors WR-COM USB Type A THT UpRight Short" H 10625 4325 50  0001 C CNN "Description"
+	1    10625 4325
+	-1   0    0    -1  
+$EndComp
+$Comp
+L conn:USB_A P8
+U 1 1 5EDC3DD5
+P 10625 3275
+F 0 "P8" H 10350 3525 50  0000 C CNN
+F 1 "USB_A" H 10525 3625 50  0000 C CNN
+F 2 "USB-A_vertical1:USB_A_Vertical" V 10575 3175 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/445/614004184726-910114.pdf" V 10575 3175 50  0001 C CNN
+F 4 "614004184726" H 10625 3275 50  0001 C CNN "Part Number"
+F 5 "Wurth Electronics" H 10625 3275 50  0001 C CNN "Manufacturerer"
+F 6 "USB Connectors WR-COM USB Type A THT UpRight Short" H 10625 3275 50  0001 C CNN "Description"
+	1    10625 3275
+	-1   0    0    -1  
+$EndComp
+$Comp
+L conn:USB_A P7
+U 1 1 5EDC3DDF
+P 10625 2225
+F 0 "P7" H 10350 2475 50  0000 C CNN
+F 1 "USB_A" H 10525 2575 50  0000 C CNN
+F 2 "USB-A_vertical1:USB_A_Vertical" V 10575 2125 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/445/614004184726-910114.pdf" V 10575 2125 50  0001 C CNN
+F 4 "614004184726" H 10625 2225 50  0001 C CNN "Part Number"
+F 5 "Wurth Electronics" H 10625 2225 50  0001 C CNN "Manufacturerer"
+F 6 "USB Connectors WR-COM USB Type A THT UpRight Short" H 10625 2225 50  0001 C CNN "Description"
+	1    10625 2225
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:F_Small F4
+U 1 1 5EDC3DE9
+P 10150 975
+F 0 "F4" H 10100 1050 50  0000 L CNN
+F 1 "F_Small" H 10030 915 50  0001 L CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_Wave" H 10150 975 50  0001 C CNN
+F 3 "http://static6.arrow.com/aropdfconversion/4753f739437b5c064b4592bb4553dc3d333a28ff/42396985575069960c1s.pdf" H 10150 975 50  0001 C CNN
+F 4 "C1S 3.5" H 10150 975 50  0001 C CNN "Part Number"
+F 5 "BEL Group" H 10150 975 50  0001 C CNN "Manufacturerer"
+F 6 "Fuse Chip Slow Blow Acting 3.5A 63V SMD Solder Pad 1206 Ceramic CE/cULus" H 10150 975 50  0001 C CNN "Description"
+	1    10150 975 
+	1    0    0    -1  
+$EndComp
+$Comp
+L conn:USB_A P6
+U 1 1 5EDC3DF3
+P 10625 1175
+F 0 "P6" H 10350 1425 50  0000 C CNN
+F 1 "USB_A" H 10525 1525 50  0000 C CNN
+F 2 "USB-A_vertical1:USB_A_Vertical" V 10575 1075 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/445/614004184726-910114.pdf" V 10575 1075 50  0001 C CNN
+F 4 "614004184726" H 10625 1175 50  0001 C CNN "Part Number"
+F 5 "Wurth Electronics" H 10625 1175 50  0001 C CNN "Manufacturerer"
+F 6 "USB Connectors WR-COM USB Type A THT UpRight Short" H 10625 1175 50  0001 C CNN "Description"
+	1    10625 1175
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1050 1900 1050
+Wire Wire Line
+	1900 1050 2050 1050
+Connection ~ 1600 1050
+Wire Wire Line
+	3500 1050 4200 1050
+Connection ~ 4300 1350
+Wire Wire Line
+	5050 675  2300 675 
+Wire Wire Line
+	4300 1350 4875 1350
+Wire Wire Line
+	3900 1850 4175 1850
+Connection ~ 4875 1350
+Wire Wire Line
+	4875 1350 5250 1350
+Wire Wire Line
+	5250 1350 5250 1250
+Wire Wire Line
+	5250 750  5250 675 
+Wire Wire Line
+	5250 675  5400 675 
+Wire Wire Line
+	5400 675  5400 1350
+Wire Wire Line
+	5525 2000 5525 1700
+Wire Wire Line
+	3000 2000 5525 2000
+Connection ~ 5525 1700
+Connection ~ 6500 1350
+Wire Notes Line
+	525  525  6825 525 
+Wire Notes Line
+	6825 2350 525  2350
+$Comp
+L 6xUSB_PowMet-rescue:CONN_02X04 P?
+U 1 1 5BF98418
+P 9950 5575
+AR Path="/5BF98418" Ref="P?"  Part="1" 
+AR Path="/571758E7/5BF98418" Ref="P4"  Part="1" 
+F 0 "P4" H 9950 5825 50  0000 C CNN
+F 1 "CONN_02X04" H 9950 5325 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x04" H 9950 4375 50  0001 C CNN
+F 3 "" H 9950 4375 50  0000 C CNN
+	1    9950 5575
+	1    0    0    1   
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:CONN_02X04 P?
+U 1 1 5BF9841F
+P 5875 6775
+AR Path="/5BF9841F" Ref="P?"  Part="1" 
+AR Path="/571758E7/5BF9841F" Ref="P2"  Part="1" 
+F 0 "P2" H 5875 7025 50  0000 C CNN
+F 1 "CONN_02X04" H 5875 6525 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x04" H 5875 5575 50  0001 C CNN
+F 3 "" H 5875 5575 50  0000 C CNN
+	1    5875 6775
+	1    0    0    1   
+$EndComp
+$Comp
+L conn:USB_A P?
+U 1 1 5BF98429
+P 10575 5525
+AR Path="/5BF98429" Ref="P?"  Part="1" 
+AR Path="/571758E7/5BF98429" Ref="P5"  Part="1" 
+F 0 "P5" H 10300 5775 50  0000 C CNN
+F 1 "USB_A" H 10475 5875 50  0000 C CNN
+F 2 "USB-A_vertical1:USB_A_Vertical" V 10525 5425 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/445/614004184726-910114.pdf" V 10525 5425 50  0001 C CNN
+F 4 "614004184726" H 10575 5525 50  0001 C CNN "Part Number"
+F 5 "Wurth Electronics" H 10575 5525 50  0001 C CNN "Manufacturerer"
+F 6 "USB Connectors WR-COM USB Type A THT UpRight Short" H 10575 5525 50  0001 C CNN "Description"
+	1    10575 5525
+	-1   0    0    -1  
+$EndComp
+$Comp
+L conn:USB_A P?
+U 1 1 5BF98433
+P 6500 6725
+AR Path="/5BF98433" Ref="P?"  Part="1" 
+AR Path="/571758E7/5BF98433" Ref="P3"  Part="1" 
+F 0 "P3" H 6225 6975 50  0000 C CNN
+F 1 "USB_A" H 6400 7075 50  0000 C CNN
+F 2 "USB-A_vertical1:USB_A_Vertical" V 6450 6625 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/445/614004184726-910114.pdf" V 6450 6625 50  0001 C CNN
+F 4 "614004184726" H 6500 6725 50  0001 C CNN "Part Number"
+F 5 "Wurth Electronics" H 6500 6725 50  0001 C CNN "Manufacturerer"
+F 6 "USB Connectors WR-COM USB Type A THT UpRight Short" H 6500 6725 50  0001 C CNN "Description"
+	1    6500 6725
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BF98440
+P 5575 7025
+AR Path="/5BF98440" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5BF98440" Ref="#PWR050"  Part="1" 
+F 0 "#PWR050" H 5575 6775 50  0001 C CNN
+F 1 "GND" H 5575 6875 50  0000 C CNN
+F 2 "" H 5575 7025 50  0000 C CNN
+F 3 "" H 5575 7025 50  0000 C CNN
+	1    5575 7025
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6125 6925 6175 6925
+Wire Wire Line
+	6175 6925 6175 7125
+Wire Wire Line
+	6175 7125 6500 7125
+Wire Wire Line
+	6125 6625 6125 6525
+Wire Wire Line
+	6125 6525 6200 6525
+Wire Wire Line
+	5625 6925 5575 6925
+Wire Wire Line
+	5575 6925 5575 7025
+Wire Wire Line
+	10200 5725 10200 5925
+Wire Wire Line
+	10200 5425 10200 5325
+Wire Wire Line
+	10200 5325 10275 5325
+NoConn ~ 9700 5525
+NoConn ~ 9700 5625
+NoConn ~ 5625 6725
+NoConn ~ 5625 6825
+$Comp
+L 6xUSB_PowMet-rescue:F_Small F?
+U 1 1 5BF9846A
+P 9525 5425
+AR Path="/5BF9846A" Ref="F?"  Part="1" 
+AR Path="/571758E7/5BF9846A" Ref="F3"  Part="1" 
+F 0 "F3" H 9475 5500 50  0000 L CNN
+F 1 "F_Small" H 9405 5365 50  0001 L CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_Wave" H 9525 5425 50  0001 C CNN
+F 3 "http://static6.arrow.com/aropdfconversion/4753f739437b5c064b4592bb4553dc3d333a28ff/42396985575069960c1s.pdf" H 9525 5425 50  0001 C CNN
+F 4 "C1S 3.5" H 9525 5425 50  0001 C CNN "Part Number"
+F 5 "BEL Group" H 9525 5425 50  0001 C CNN "Manufacturerer"
+F 6 "Fuse Chip Slow Blow Acting 3.5A 63V SMD Solder Pad 1206 Ceramic CE/cULus" H 9525 5425 50  0001 C CNN "Description"
+	1    9525 5425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9625 5425 9700 5425
+$Comp
+L 6xUSB_PowMet-rescue:F_Small F?
+U 1 1 5BF98475
+P 5450 6625
+AR Path="/5BF98475" Ref="F?"  Part="1" 
+AR Path="/571758E7/5BF98475" Ref="F2"  Part="1" 
+F 0 "F2" H 5400 6700 50  0000 L CNN
+F 1 "F_Small" H 5330 6565 50  0001 L CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_Wave" H 5450 6625 50  0001 C CNN
+F 3 "http://static6.arrow.com/aropdfconversion/4753f739437b5c064b4592bb4553dc3d333a28ff/42396985575069960c1s.pdf" H 5450 6625 50  0001 C CNN
+F 4 "C1S 3.5" H 5450 6625 50  0001 C CNN "Part Number"
+F 5 "BEL Group" H 5450 6625 50  0001 C CNN "Manufacturerer"
+F 6 "Fuse Chip Slow Blow Acting 3.5A 63V SMD Solder Pad 1206 Ceramic CE/cULus" H 5450 6625 50  0001 C CNN "Description"
+	1    5450 6625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 6625 5625 6625
+$Comp
+L 6xUSB_PowMet-rescue:P-CHAN-MOSFET_SOT Q?
+U 1 1 5BF98480
+P 9075 5550
+AR Path="/5BF98480" Ref="Q?"  Part="1" 
+AR Path="/571758E7/5BF98480" Ref="Q5"  Part="1" 
+F 0 "Q5" H 9075 5425 60  0000 C CNN
+F 1 "IRLML6401" H 9000 5700 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 9075 5550 60  0001 C CNN
+F 3 "https://www.elfadistrelec.lv/Web/Downloads/1_/en/zmint_RECTIFIER_FET-Trans-IRLML6401_EN.pdf?mime=application%2Fpdf" H 9075 5550 60  0001 C CNN
+F 4 "IRLML6401GTRPBF" H 9075 5550 50  0001 C CNN "Part Number"
+F 5 "Infineon Technologies AG" H 9075 5550 50  0001 C CNN "Manufacturerer"
+F 6 "Trans MOSFET P-CH Si 12V 4.3A 3-Pin SOT-23 T/R" H 9075 5550 50  0001 C CNN "Description"
+	1    9075 5550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9225 5600 9275 5600
+$Comp
+L Device:C_Small C?
+U 1 1 5BF9848B
+P 9275 5850
+AR Path="/5BF9848B" Ref="C?"  Part="1" 
+AR Path="/571758E7/5BF9848B" Ref="C41"  Part="1" 
+F 0 "C41" H 9125 5925 50  0000 L CNN
+F 1 "10uF" H 9075 5775 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9275 5850 50  0001 C CNN
+F 3 "" H 9275 5850 50  0000 C CNN
+F 4 "10%" H 9275 5850 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 9275 5850 50  0001 C CNN "Series"
+F 6 "25V" H 9275 5850 50  0001 C CNN "Voltage"
+	1    9275 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9275 5750 9275 5600
+Connection ~ 9275 5600
+$Comp
+L power:GND #PWR?
+U 1 1 5BF98494
+P 9275 6000
+AR Path="/5BF98494" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5BF98494" Ref="#PWR073"  Part="1" 
+F 0 "#PWR073" H 9275 5750 50  0001 C CNN
+F 1 "GND" H 9275 5850 50  0000 C CNN
+F 2 "" H 9275 6000 50  0000 C CNN
+F 3 "" H 9275 6000 50  0000 C CNN
+	1    9275 6000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:LT6106 U?
+U 1 1 5BF9849D
+P 8225 5800
+AR Path="/5BF9849D" Ref="U?"  Part="1" 
+AR Path="/571758E7/5BF9849D" Ref="U9"  Part="1" 
+F 0 "U9" H 8075 6150 60  0000 L CNN
+F 1 "LT6106" H 8075 5500 60  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 8475 5800 60  0001 C CNN
+F 3 "" H 8475 5800 60  0000 C CNN
+F 4 "LT6106IS5#TRMPBF" H 8225 5800 50  0001 C CNN "Part Number"
+F 5 "Analog Devices" H 8225 5800 50  0001 C CNN "Manufacturerer"
+F 6 "SP Amp Current Sense Amp Single 36V Automotive 5-Pin TSOT-23 T/R" H 8225 5800 50  0001 C CNN "Description"
+	1    8225 5800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8525 5750 8525 5975
+Wire Wire Line
+	9225 5500 9250 5500
+Wire Wire Line
+	9250 5500 9250 5350
+$Comp
+L Device:R_Small R?
+U 1 1 5BF984AB
+P 8325 5350
+AR Path="/5BF984AB" Ref="R?"  Part="1" 
+AR Path="/571758E7/5BF984AB" Ref="R41"  Part="1" 
+F 0 "R41" V 8375 5500 50  0000 C CNN
+F 1 "0.02R" V 8275 5550 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8255 5350 50  0001 C CNN
+F 3 "" H 8325 5350 50  0000 C CNN
+F 4 "125mW" H 4900 175 50  0001 C CNN "Power Rating"
+F 5 "1%" H 4900 175 50  0001 C CNN "Tolerance"
+	1    8325 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5BF984B4
+P 7850 5350
+AR Path="/5BF984B4" Ref="R?"  Part="1" 
+AR Path="/571758E7/5BF984B4" Ref="R36"  Part="1" 
+F 0 "R36" V 7900 5500 50  0000 C CNN
+F 1 "100R" V 7800 5525 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7780 5350 50  0001 C CNN
+F 3 "" H 7850 5350 50  0000 C CNN
+F 4 "125mW" H 3925 175 50  0001 C CNN "Power Rating"
+F 5 "1%" H 3925 175 50  0001 C CNN "Tolerance"
+	1    7850 5350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8525 5350 8525 5550
+Wire Wire Line
+	9275 5950 9275 5975
+Connection ~ 9275 5975
+Wire Wire Line
+	9275 5975 9275 6000
+Wire Wire Line
+	7875 5550 7575 5550
+Wire Wire Line
+	8525 5975 9275 5975
+$Comp
+L Device:C_Small C?
+U 1 1 5BF984C5
+P 7700 5750
+AR Path="/5BF984C5" Ref="C?"  Part="1" 
+AR Path="/571758E7/5BF984C5" Ref="C32"  Part="1" 
+F 0 "C32" V 7750 5800 50  0000 L CNN
+F 1 "100nF" V 7650 5800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7700 5750 50  0001 C CNN
+F 3 "" H 7700 5750 50  0000 C CNN
+F 4 "10%" H 7700 5750 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 7700 5750 50  0001 C CNN "Series"
+F 6 "25V" H 7700 5750 50  0001 C CNN "Voltage"
+	1    7700 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 5750 7825 5750
+Wire Wire Line
+	7825 5750 7825 5475
+Wire Wire Line
+	7825 5475 7975 5475
+Wire Wire Line
+	7975 5475 7975 5350
+Connection ~ 7825 5750
+Wire Wire Line
+	7825 5750 7875 5750
+$Comp
+L power:GND #PWR?
+U 1 1 5BF984D2
+P 7400 5800
+AR Path="/5BF984D2" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5BF984D2" Ref="#PWR059"  Part="1" 
+F 0 "#PWR059" H 7400 5550 50  0001 C CNN
+F 1 "GND" H 7400 5650 50  0000 C CNN
+F 2 "" H 7400 5800 50  0000 C CNN
+F 3 "" H 7400 5800 50  0000 C CNN
+	1    7400 5800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 5800 7400 5750
+Wire Wire Line
+	7400 5750 7600 5750
+$Comp
+L Device:R_Small R?
+U 1 1 5BF984DC
+P 7500 6150
+AR Path="/5BF984DC" Ref="R?"  Part="1" 
+AR Path="/571758E7/5BF984DC" Ref="R35"  Part="1" 
+F 0 "R35" H 7375 6200 50  0000 C CNN
+F 1 "1K" H 7400 6100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7430 6150 50  0001 C CNN
+F 3 "" H 7500 6150 50  0000 C CNN
+F 4 "125mW" H 3400 175 50  0001 C CNN "Power Rating"
+F 5 "1%" H 3400 175 50  0001 C CNN "Tolerance"
+	1    7500 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5BF984E6
+P 7225 6150
+AR Path="/5BF984E6" Ref="C?"  Part="1" 
+AR Path="/571758E7/5BF984E6" Ref="C31"  Part="1" 
+F 0 "C31" H 7050 6225 50  0000 L CNN
+F 1 "1nF" H 7075 6075 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7225 6150 50  0001 C CNN
+F 3 "" H 7225 6150 50  0000 C CNN
+F 4 "10%" H 7225 6150 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 7225 6150 50  0001 C CNN "Series"
+F 6 "25V" H 7225 6150 50  0001 C CNN "Voltage"
+	1    7225 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7875 6000 7500 6000
+Wire Wire Line
+	7225 6000 7225 6050
+Wire Wire Line
+	7500 6050 7500 6000
+Connection ~ 7500 6000
+Wire Wire Line
+	7500 6000 7225 6000
+Wire Wire Line
+	7500 6250 7500 6275
+Wire Wire Line
+	7225 6275 7225 6250
+$Comp
+L power:GND #PWR?
+U 1 1 5BF984F4
+P 7350 6275
+AR Path="/5BF984F4" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5BF984F4" Ref="#PWR058"  Part="1" 
+F 0 "#PWR058" H 7350 6025 50  0001 C CNN
+F 1 "GND" H 7350 6125 50  0000 C CNN
+F 2 "" H 7350 6275 50  0000 C CNN
+F 3 "" H 7350 6275 50  0000 C CNN
+	1    7350 6275
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 6275 7225 6275
+Connection ~ 7350 6275
+Wire Wire Line
+	7500 6275 7350 6275
+Wire Wire Line
+	7050 6000 7225 6000
+Connection ~ 7225 6000
+$Comp
+L 6xUSB_PowMet-rescue:P-CHAN-MOSFET_SOT Q?
+U 1 1 5BF98503
+P 5000 6750
+AR Path="/5BF98503" Ref="Q?"  Part="1" 
+AR Path="/571758E7/5BF98503" Ref="Q3"  Part="1" 
+F 0 "Q3" H 5000 6625 60  0000 C CNN
+F 1 "IRLML6401" H 4925 6900 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5000 6750 60  0001 C CNN
+F 3 "https://www.elfadistrelec.lv/Web/Downloads/1_/en/zmint_RECTIFIER_FET-Trans-IRLML6401_EN.pdf?mime=application%2Fpdf" H 5000 6750 60  0001 C CNN
+F 4 "IRLML6401GTRPBF" H 5000 6750 50  0001 C CNN "Part Number"
+F 5 "Infineon Technologies AG" H 5000 6750 50  0001 C CNN "Manufacturerer"
+F 6 "Trans MOSFET P-CH Si 12V 4.3A 3-Pin SOT-23 T/R" H 5000 6750 50  0001 C CNN "Description"
+	1    5000 6750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5150 6800 5200 6800
+$Comp
+L Device:C_Small C?
+U 1 1 5BF9850E
+P 5200 7050
+AR Path="/5BF9850E" Ref="C?"  Part="1" 
+AR Path="/571758E7/5BF9850E" Ref="C27"  Part="1" 
+F 0 "C27" H 5050 7125 50  0000 L CNN
+F 1 "10uF" H 5000 6975 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5200 7050 50  0001 C CNN
+F 3 "" H 5200 7050 50  0000 C CNN
+F 4 "10%" H 5200 7050 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 5200 7050 50  0001 C CNN "Series"
+F 6 "25V" H 5200 7050 50  0001 C CNN "Voltage"
+	1    5200 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 6950 5200 6800
+Connection ~ 5200 6800
+Wire Wire Line
+	5200 6800 5300 6800
+$Comp
+L power:GND #PWR?
+U 1 1 5BF98518
+P 5200 7200
+AR Path="/5BF98518" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5BF98518" Ref="#PWR049"  Part="1" 
+F 0 "#PWR049" H 5200 6950 50  0001 C CNN
+F 1 "GND" H 5200 7050 50  0000 C CNN
+F 2 "" H 5200 7200 50  0000 C CNN
+F 3 "" H 5200 7200 50  0000 C CNN
+	1    5200 7200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 6xUSB_PowMet-rescue:LT6106 U?
+U 1 1 5BF98521
+P 4150 7000
+AR Path="/5BF98521" Ref="U?"  Part="1" 
+AR Path="/571758E7/5BF98521" Ref="U7"  Part="1" 
+F 0 "U7" H 3975 7350 60  0000 L CNN
+F 1 "LT6106" H 4000 6700 60  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 4400 7000 60  0001 C CNN
+F 3 "" H 4400 7000 60  0000 C CNN
+F 4 "LT6106IS5#TRMPBF" H 4150 7000 50  0001 C CNN "Part Number"
+F 5 "Analog Devices" H 4150 7000 50  0001 C CNN "Manufacturerer"
+F 6 "SP Amp Current Sense Amp Single 36V Automotive 5-Pin TSOT-23 T/R" H 4150 7000 50  0001 C CNN "Description"
+	1    4150 7000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 6950 4450 7175
+Wire Wire Line
+	5150 6700 5175 6700
+Wire Wire Line
+	5175 6700 5175 6550
+Wire Wire Line
+	5175 6550 4450 6550
+$Comp
+L Device:R_Small R?
+U 1 1 5BF98530
+P 4250 6550
+AR Path="/5BF98530" Ref="R?"  Part="1" 
+AR Path="/571758E7/5BF98530" Ref="R29"  Part="1" 
+F 0 "R29" V 4300 6700 50  0000 C CNN
+F 1 "0.02R" V 4200 6750 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 4180 6550 50  0001 C CNN
+F 3 "" H 4250 6550 50  0000 C CNN
+F 4 "125mW" H 825 325 50  0001 C CNN "Power Rating"
+F 5 "1%" H 825 325 50  0001 C CNN "Tolerance"
+	1    4250 6550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4350 6550 4450 6550
+$Comp
+L Device:R_Small R?
+U 1 1 5BF9853A
+P 3775 6550
+AR Path="/5BF9853A" Ref="R?"  Part="1" 
+AR Path="/571758E7/5BF9853A" Ref="R26"  Part="1" 
+F 0 "R26" V 3825 6700 50  0000 C CNN
+F 1 "100R" V 3725 6725 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3705 6550 50  0001 C CNN
+F 3 "" H 3775 6550 50  0000 C CNN
+F 4 "125mW" H -150 325 50  0001 C CNN "Power Rating"
+F 5 "1%" H -150 325 50  0001 C CNN "Tolerance"
+	1    3775 6550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 6550 4450 6750
+Connection ~ 4450 6550
+Wire Wire Line
+	5200 7150 5200 7175
+Connection ~ 5200 7175
+Wire Wire Line
+	5200 7175 5200 7200
+Wire Wire Line
+	3875 6550 3900 6550
+Wire Wire Line
+	3800 6750 3500 6750
+Wire Wire Line
+	3900 6525 3900 6550
+Connection ~ 3900 6550
+Wire Wire Line
+	3900 6550 4150 6550
+Wire Wire Line
+	4450 7175 5200 7175
+$Comp
+L Device:C_Small C?
+U 1 1 5BF98556
+P 3625 6950
+AR Path="/5BF98556" Ref="C?"  Part="1" 
+AR Path="/571758E7/5BF98556" Ref="C24"  Part="1" 
+F 0 "C24" V 3675 7000 50  0000 L CNN
+F 1 "100nF" V 3575 6975 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3625 6950 50  0001 C CNN
+F 3 "" H 3625 6950 50  0000 C CNN
+F 4 "10%" H 3625 6950 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 3625 6950 50  0001 C CNN "Series"
+F 6 "25V" H 3625 6950 50  0001 C CNN "Voltage"
+	1    3625 6950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3725 6950 3750 6950
+Wire Wire Line
+	3750 6950 3750 6675
+Wire Wire Line
+	3750 6675 3900 6675
+Wire Wire Line
+	3900 6675 3900 6550
+Connection ~ 3750 6950
+Wire Wire Line
+	3750 6950 3800 6950
+$Comp
+L power:GND #PWR?
+U 1 1 5BF98563
+P 3350 7000
+AR Path="/5BF98563" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5BF98563" Ref="#PWR044"  Part="1" 
+F 0 "#PWR044" H 3350 6750 50  0001 C CNN
+F 1 "GND" H 3350 6850 50  0000 C CNN
+F 2 "" H 3350 7000 50  0000 C CNN
+F 3 "" H 3350 7000 50  0000 C CNN
+	1    3350 7000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 7000 3350 6950
+Wire Wire Line
+	3350 6950 3525 6950
+$Comp
+L Device:R_Small R?
+U 1 1 5BF9856D
+P 3425 7350
+AR Path="/5BF9856D" Ref="R?"  Part="1" 
+AR Path="/571758E7/5BF9856D" Ref="R25"  Part="1" 
+F 0 "R25" H 3300 7400 50  0000 C CNN
+F 1 "1K" H 3325 7325 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3355 7350 50  0001 C CNN
+F 3 "" H 3425 7350 50  0000 C CNN
+F 4 "125mW" H -675 325 50  0001 C CNN "Power Rating"
+F 5 "1%" H -675 325 50  0001 C CNN "Tolerance"
+	1    3425 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5BF98577
+P 3150 7350
+AR Path="/5BF98577" Ref="C?"  Part="1" 
+AR Path="/571758E7/5BF98577" Ref="C22"  Part="1" 
+F 0 "C22" H 3000 7425 50  0000 L CNN
+F 1 "1nF" H 3000 7275 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3150 7350 50  0001 C CNN
+F 3 "" H 3150 7350 50  0000 C CNN
+F 4 "10%" H 3150 7350 50  0001 C CNN "Tolerance"
+F 5 "X7R" H 3150 7350 50  0001 C CNN "Series"
+F 6 "25V" H 3150 7350 50  0001 C CNN "Voltage"
+	1    3150 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 7200 3425 7200
+Wire Wire Line
+	3150 7200 3150 7250
+Wire Wire Line
+	3425 7250 3425 7200
+Connection ~ 3425 7200
+Wire Wire Line
+	3425 7200 3150 7200
+Wire Wire Line
+	3425 7450 3425 7475
+Wire Wire Line
+	3150 7475 3150 7450
+$Comp
+L power:GND #PWR?
+U 1 1 5BF98585
+P 3275 7475
+AR Path="/5BF98585" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5BF98585" Ref="#PWR042"  Part="1" 
+F 0 "#PWR042" H 3275 7225 50  0001 C CNN
+F 1 "GND" H 3275 7325 50  0000 C CNN
+F 2 "" H 3275 7475 50  0000 C CNN
+F 3 "" H 3275 7475 50  0000 C CNN
+	1    3275 7475
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3275 7475 3150 7475
+Connection ~ 3275 7475
+Wire Wire Line
+	3425 7475 3275 7475
+Connection ~ 3150 7200
+Wire Wire Line
+	8525 5350 9250 5350
+Wire Wire Line
+	9425 5600 9425 5425
+Wire Wire Line
+	9425 5600 9275 5600
+Wire Wire Line
+	5300 6800 5300 6625
+Wire Wire Line
+	5300 6625 5350 6625
+Wire Wire Line
+	7975 5350 8225 5350
+Wire Wire Line
+	7950 5350 7975 5350
+Connection ~ 7975 5350
+Wire Wire Line
+	8425 5350 8525 5350
+Connection ~ 8525 5350
+Wire Wire Line
+	7975 5325 7975 5350
+Wire Notes Line
+	6875 7675 6875 6475
+Wire Notes Line
+	6875 6475 11075 6475
+Wire Notes Line
+	11075 6475 11075 5125
+Text Notes 6650 5250 0    60   ~ 12
+5-6 Power ports
+Text HLabel 4825 6700 0    60   Input ~ 0
+USB6
+Text HLabel 8900 5500 0    60   Input ~ 0
+USB5
+Text HLabel 9475 4100 0    60   Input ~ 0
+USB4
+Text HLabel 9475 3050 0    60   Input ~ 0
+USB3
+Text HLabel 9475 950  0    60   Input ~ 0
+USB1
+Text HLabel 9475 2000 0    60   Input ~ 0
+USB2
+Text HLabel 7650 1450 0    60   Input ~ 0
+U_Sens1
+Text HLabel 7650 2500 0    60   Output ~ 0
+U_Sens2
+Text HLabel 7650 3550 0    60   Output ~ 0
+U_Sens3
+Text HLabel 7650 4600 0    60   Output ~ 0
+U_Sens4
+Text HLabel 7050 6000 0    60   Output ~ 0
+U_Sens5
+Wire Notes Line
+	6550 5125 6550 6200
+Wire Notes Line
+	6550 6200 2425 6200
+Wire Notes Line
+	2425 6200 2425 7675
+Wire Notes Line
+	6550 5125 11075 5125
+Wire Notes Line
+	2425 7675 6875 7675
+Wire Wire Line
+	4250 2825 4250 3325
+Wire Wire Line
+	4250 2825 5400 2825
+Connection ~ 4250 3325
+Wire Wire Line
+	4250 3325 4300 3325
+Text Label 6500 675  3    60   ~ 0
+VDC
+Text Label 3650 3325 0    60   ~ 0
+VDC
+Text HLabel 6075 3625 2    60   Output ~ 0
+PB0_40
+Text HLabel 4000 3250 1    60   Output ~ 0
+PB1_41
+Wire Wire Line
+	4000 3250 4000 3325
+Text HLabel 3325 4925 1    60   Output ~ 0
++4.096V
+Wire Wire Line
+	6500 675  6500 850 
+Text HLabel 10325 1175 0    60   BiDi ~ 0
+D+1
+Text HLabel 10325 1275 0    60   BiDi ~ 0
+D-1
+Wire Wire Line
+	10300 2325 10325 2325
+Wire Wire Line
+	10300 2225 10325 2225
+Text HLabel 10300 2225 0    60   BiDi ~ 0
+D+2
+Text HLabel 10300 2325 0    60   BiDi ~ 0
+D-2
+Wire Wire Line
+	10300 3375 10325 3375
+Wire Wire Line
+	10300 3275 10325 3275
+Text HLabel 10300 3275 0    60   BiDi ~ 0
+D+3
+Text HLabel 10300 3375 0    60   BiDi ~ 0
+D-3
+Wire Wire Line
+	10300 4425 10325 4425
+Wire Wire Line
+	10300 4325 10325 4325
+Text HLabel 10300 4325 0    60   BiDi ~ 0
+D+4
+Text HLabel 10300 4425 0    60   BiDi ~ 0
+D-4
+Wire Wire Line
+	1350 3150 1300 3150
+Wire Wire Line
+	1350 3050 1300 3050
+Text HLabel 1350 3050 2    60   BiDi ~ 0
+D-5
+Text HLabel 1350 3150 2    60   BiDi ~ 0
+D+5
+Text HLabel 1675 2925 1    60   Output ~ 0
+USB_P
+Wire Wire Line
+	9475 950  9500 950 
+Wire Wire Line
+	9475 2000 9500 2000
+Wire Wire Line
+	9475 3050 9500 3050
+Wire Wire Line
+	9475 4100 9500 4100
+Wire Wire Line
+	8900 5500 8925 5500
+Wire Wire Line
+	4825 6700 4850 6700
+Wire Wire Line
+	3000 7200 3150 7200
+Text HLabel 3000 7200 0    60   Output ~ 0
+U_Sens6
+Wire Wire Line
+	1675 3625 1675 3650
+Wire Wire Line
+	2350 1700 2350 1650
+Wire Wire Line
+	1325 1400 1325 1350
+$Comp
+L power:GND #PWR0101
+U 1 1 5C14EE45
+P 4125 1150
+F 0 "#PWR0101" H 4125 900 50  0001 C CNN
+F 1 "GND" H 4125 1000 50  0000 C CNN
+F 2 "" H 4125 1150 50  0000 C CNN
+F 3 "" H 4125 1150 50  0000 C CNN
+	1    4125 1150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5C1A6EB5
+P 4000 1650
+F 0 "#PWR0102" H 4000 1400 50  0001 C CNN
+F 1 "GND" H 4000 1500 50  0000 C CNN
+F 2 "" H 4000 1650 50  0000 C CNN
+F 3 "" H 4000 1650 50  0000 C CNN
+	1    4000 1650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5C1D2C98
+P 5850 1950
+F 0 "#PWR0103" H 5850 1700 50  0001 C CNN
+F 1 "GND" H 5850 1800 50  0000 C CNN
+F 2 "" H 5850 1950 50  0000 C CNN
+F 3 "" H 5850 1950 50  0000 C CNN
+	1    5850 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5C1D2D6F
+P 6175 1950
+F 0 "#PWR0104" H 6175 1700 50  0001 C CNN
+F 1 "GND" H 6175 1800 50  0000 C CNN
+F 2 "" H 6175 1950 50  0000 C CNN
+F 3 "" H 6175 1950 50  0000 C CNN
+	1    6175 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5C1D2E46
+P 6500 1950
+F 0 "#PWR0105" H 6500 1700 50  0001 C CNN
+F 1 "GND" H 6500 1800 50  0000 C CNN
+F 2 "" H 6500 1950 50  0000 C CNN
+F 3 "" H 6500 1950 50  0000 C CNN
+	1    6500 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5C1D2F1D
+P 5600 3875
+F 0 "#PWR0106" H 5600 3625 50  0001 C CNN
+F 1 "GND" H 5600 3725 50  0000 C CNN
+F 2 "" H 5600 3875 50  0000 C CNN
+F 3 "" H 5600 3875 50  0000 C CNN
+	1    5600 3875
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5C1D2FF4
+P 4250 3725
+F 0 "#PWR0107" H 4250 3475 50  0001 C CNN
+F 1 "GND" H 4250 3575 50  0000 C CNN
+F 2 "" H 4250 3725 50  0000 C CNN
+F 3 "" H 4250 3725 50  0000 C CNN
+	1    4250 3725
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5C1D3269
+P 6150 3125
+F 0 "#PWR0108" H 6150 2875 50  0001 C CNN
+F 1 "GND" H 6150 2975 50  0000 C CNN
+F 2 "" H 6150 3125 50  0000 C CNN
+F 3 "" H 6150 3125 50  0000 C CNN
+	1    6150 3125
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5C1D35A7
+P 2900 1950
+F 0 "#PWR0109" H 2900 1700 50  0001 C CNN
+F 1 "GND" H 2900 1800 50  0000 C CNN
+F 2 "" H 2900 1950 50  0000 C CNN
+F 3 "" H 2900 1950 50  0000 C CNN
+	1    2900 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5C1D367E
+P 2350 1700
+F 0 "#PWR0110" H 2350 1450 50  0001 C CNN
+F 1 "GND" H 2350 1550 50  0000 C CNN
+F 2 "" H 2350 1700 50  0000 C CNN
+F 3 "" H 2350 1700 50  0000 C CNN
+	1    2350 1700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5C1D3755
+P 2150 1500
+F 0 "#PWR0111" H 2150 1250 50  0001 C CNN
+F 1 "GND" H 2150 1350 50  0000 C CNN
+F 2 "" H 2150 1500 50  0000 C CNN
+F 3 "" H 2150 1500 50  0000 C CNN
+	1    2150 1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5C1D382C
+P 1325 1400
+F 0 "#PWR0112" H 1325 1150 50  0001 C CNN
+F 1 "GND" H 1325 1250 50  0000 C CNN
+F 2 "" H 1325 1400 50  0000 C CNN
+F 3 "" H 1325 1400 50  0000 C CNN
+	1    1325 1400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10675 5925 10575 5925
+Connection ~ 10575 5925
+Wire Wire Line
+	10725 4725 10625 4725
+Connection ~ 10625 4725
+Wire Wire Line
+	10725 3675 10625 3675
+Connection ~ 10625 3675
+Wire Wire Line
+	10725 2625 10625 2625
+Connection ~ 10625 2625
+Wire Wire Line
+	10725 1575 10625 1575
+Connection ~ 10625 1575
+Wire Wire Line
+	8325 800  8150 800 
+Wire Wire Line
+	8150 800  8150 1000
+Connection ~ 1000 2750
+Wire Wire Line
+	3675 6550 3500 6550
+Wire Wire Line
+	3500 6550 3500 6750
+Wire Wire Line
+	10200 5625 10200 5575
+Wire Wire Line
+	10200 5575 10275 5575
+Wire Wire Line
+	10275 5575 10275 5525
+Wire Wire Line
+	10275 5625 10250 5625
+Wire Wire Line
+	10250 5625 10250 5525
+Wire Wire Line
+	10250 5525 10200 5525
+Wire Wire Line
+	6200 6825 6175 6825
+Wire Wire Line
+	6175 6825 6175 6725
+Wire Wire Line
+	6175 6725 6125 6725
+Wire Wire Line
+	6125 6825 6125 6775
+Wire Wire Line
+	6125 6775 6200 6775
+Wire Wire Line
+	6200 6775 6200 6725
+Wire Wire Line
+	10200 5925 10575 5925
+$Comp
+L power:GND #PWR?
+U 1 1 5C712864
+P 1350 2750
+AR Path="/5C712864" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5C712864" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 1350 2500 50  0001 C CNN
+F 1 "GND" H 1350 2600 50  0000 C CNN
+F 2 "" H 1350 2750 50  0000 C CNN
+F 3 "" H 1350 2750 50  0000 C CNN
+	1    1350 2750
+	1    0    0    -1  
+$EndComp
+Connection ~ 6500 7125
+Wire Wire Line
+	6600 7125 6500 7125
+Wire Wire Line
+	7750 5350 7575 5350
+Wire Wire Line
+	7575 5350 7575 5550
+Wire Wire Line
+	8325 3950 8150 3950
+Wire Wire Line
+	8150 3950 8150 4150
+Wire Wire Line
+	8325 2900 8150 2900
+Wire Wire Line
+	8150 2900 8150 3100
+Wire Wire Line
+	8325 1850 8150 1850
+Wire Wire Line
+	8150 1850 8150 2050
+Wire Wire Line
+	9650 5725 9700 5725
+Wire Wire Line
+	9650 5825 9650 5725
+$Comp
+L power:GND #PWR?
+U 1 1 5BF9843A
+P 9650 5825
+AR Path="/5BF9843A" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5BF9843A" Ref="#PWR074"  Part="1" 
+F 0 "#PWR074" H 9650 5575 50  0001 C CNN
+F 1 "GND" H 9650 5675 50  0000 C CNN
+F 2 "" H 9650 5825 50  0000 C CNN
+F 3 "" H 9650 5825 50  0000 C CNN
+	1    9650 5825
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3325 5850 2825
+Connection ~ 5850 3325
+Wire Wire Line
+	5850 2825 6025 2825
+Connection ~ 5850 2825
+Wire Wire Line
+	6150 2775 6150 2825
+Text Label 2875 3350 2    60   ~ 0
+VREG
+Text Label 6025 2575 3    60   ~ 0
+VREG
+Wire Wire Line
+	6025 2575 6025 2825
+Connection ~ 6025 2825
+Wire Wire Line
+	6025 2825 6150 2825
+$Comp
+L power:+5V #PWR0118
+U 1 1 5C370C63
+P 8550 775
+F 0 "#PWR0118" H 8550 625 50  0001 C CNN
+F 1 "+5V" H 8550 925 50  0000 C CNN
+F 2 "" H 8550 775 50  0001 C CNN
+F 3 "" H 8550 775 50  0001 C CNN
+	1    8550 775 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0120
+U 1 1 5C370F3F
+P 8550 1825
+F 0 "#PWR0120" H 8550 1675 50  0001 C CNN
+F 1 "+5V" H 8550 1975 50  0000 C CNN
+F 2 "" H 8550 1825 50  0001 C CNN
+F 3 "" H 8550 1825 50  0001 C CNN
+	1    8550 1825
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0121
+U 1 1 5C37127A
+P 8550 2875
+F 0 "#PWR0121" H 8550 2725 50  0001 C CNN
+F 1 "+5V" H 8550 3025 50  0000 C CNN
+F 2 "" H 8550 2875 50  0001 C CNN
+F 3 "" H 8550 2875 50  0001 C CNN
+	1    8550 2875
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0122
+U 1 1 5C3715B5
+P 8550 3925
+F 0 "#PWR0122" H 8550 3775 50  0001 C CNN
+F 1 "+5V" H 8550 4075 50  0000 C CNN
+F 2 "" H 8550 3925 50  0001 C CNN
+F 3 "" H 8550 3925 50  0001 C CNN
+	1    8550 3925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0123
+U 1 1 5C3718F0
+P 7975 5325
+F 0 "#PWR0123" H 7975 5175 50  0001 C CNN
+F 1 "+5V" H 7975 5475 50  0000 C CNN
+F 2 "" H 7975 5325 50  0001 C CNN
+F 3 "" H 7975 5325 50  0001 C CNN
+	1    7975 5325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0124
+U 1 1 5C371D68
+P 3900 6525
+F 0 "#PWR0124" H 3900 6375 50  0001 C CNN
+F 1 "+5V" H 3915 6698 50  0000 C CNN
+F 2 "" H 3900 6525 50  0001 C CNN
+F 3 "" H 3900 6525 50  0001 C CNN
+	1    3900 6525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0125
+U 1 1 5C372378
+P 6150 2775
+F 0 "#PWR0125" H 6150 2625 50  0001 C CNN
+F 1 "+5V" H 6165 2948 50  0000 C CNN
+F 2 "" H 6150 2775 50  0001 C CNN
+F 3 "" H 6150 2775 50  0001 C CNN
+	1    6150 2775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0126
+U 1 1 5C3730C0
+P 2875 4675
+F 0 "#PWR0126" H 2875 4525 50  0001 C CNN
+F 1 "+5V" H 2890 4848 50  0000 C CNN
+F 2 "" H 2875 4675 50  0001 C CNN
+F 3 "" H 2875 4675 50  0001 C CNN
+	1    2875 4675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0127
+U 1 1 5C373197
+P 650 4850
+F 0 "#PWR0127" H 650 4700 50  0001 C CNN
+F 1 "+5V" H 665 5023 50  0000 C CNN
+F 2 "" H 650 4850 50  0001 C CNN
+F 3 "" H 650 4850 50  0001 C CNN
+	1    650  4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2975 2200 3350
+Text HLabel 2200 2975 1    60   Output ~ 0
+VBUSM
+Wire Wire Line
+	650  4850 650  4875
+Wire Wire Line
+	1800 4850 1800 4875
+Wire Wire Line
+	8375 4350 8400 4350
+Connection ~ 8400 4350
+Wire Wire Line
+	8400 4350 8450 4350
+NoConn ~ 12400 5550
+$Comp
+L power:GND #PWR?
+U 1 1 5CC6578F
+P 10575 5925
+AR Path="/5CC6578F" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5CC6578F" Ref="#PWR0117"  Part="1" 
+F 0 "#PWR0117" H 10575 5675 50  0001 C CNN
+F 1 "GND" H 10575 5775 50  0000 C CNN
+F 2 "" H 10575 5925 50  0000 C CNN
+F 3 "" H 10575 5925 50  0000 C CNN
+	1    10575 5925
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CC654BA
+P 6500 7125
+AR Path="/5CC654BA" Ref="#PWR?"  Part="1" 
+AR Path="/571758E7/5CC654BA" Ref="#PWR0116"  Part="1" 
+F 0 "#PWR0116" H 6500 6875 50  0001 C CNN
+F 1 "GND" H 6500 6975 50  0000 C CNN
+F 2 "" H 6500 7125 50  0000 C CNN
+F 3 "" H 6500 7125 50  0000 C CNN
+	1    6500 7125
+	-1   0    0    -1  
+$EndComp
+$EndSCHEMATC

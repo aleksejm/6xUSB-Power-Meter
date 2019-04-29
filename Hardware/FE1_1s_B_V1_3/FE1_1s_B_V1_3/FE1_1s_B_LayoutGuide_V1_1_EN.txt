@@ -1,0 +1,44 @@
+FE1.1s B (SSOP28) Layout Guide V1.0
+-----------------------------------
+
+ 1. All bypass 0.1uF caps, please use size of 0603 and should be 
+ 	as close as possible to the IC(FE1.1s).
+ 2. Two 0.1uF/16V/0603 capacitors, C3 and C5 must close to FE1.1s pin 20
+ 	(VDD5), also the current path must through the capacitors first before
+ 	entering the pin 20(VDD5).
+ 3. DP, DM Differential trace impedance = [ DP & DM ] = 90 ohm,
+ 	and do not jump the DP DM signals that will cause impedance miss match.
+ 4. VDD5(pin 20) to VD33_O(pin 21) max current 500mA
+ 5. The DP, DM signal-line should keep 40 mil away from other lines, 
+	and the bottom layer should flood with GND (preventing the GND cut).
+ 6. Keep the components out of the XTAL, which also keeping away from DP, DM 
+ 	signals. The bottom layer of XTAL should flood with GND. The shell of XTAL
+ 	should not connect to the PCB, that will inject the noise to the PCB.
+ 7. The coupling resistor (2.7k+-1%) of the REXT (pin 14) should be 
+ 	as close as possible to the IC, and punch 3 more ground vias at ground side
+ 	of the resistor.
+ 8. Pin 1 (VSS) is the only GND pin, and should be grounded efficiently, means
+ 	punching more GND VIAs near by, at least 5 GND vias, as possible.
+ 9. Please refer to the schematic of current path, carefulling the line-width 
+ 	of major current path.
+10. The length of 5 couples of DP, DM signal-line, including upstream and all 
+	downstream ports,  should no less than 1500 mil with 10 of 45-degree-angle, 
+	which will degrade the DP DM driving strength in order to pass USB-IF 
+	requirement only. If not, the shorter and straighter DP DM signal line, make 
+	longer transaction capability (more than 5 meter).
+11. Make less jump to the power line. If doing jump of power line,at least 2 of 
+	1mm through holes, need to be drilled. If through holes smaller than 1mm, 
+	the number of holes should be doubled.
+12. Downstream port's capacitor, 100uF, must as close to each USB connector's 
+	Vbus5V as possible.
+13. Fuse(2.5A) need to be low drop type if used.
+14. Net of OVCJ and R8 to VCC_5V should be less than 400 mil, leaving far 
+	away from any USB connector, and the net's bottom layer should flood with 
+	GND (preventing the GND cut), this can prevent the interference of ESD.
+15. USB connector's shielding ground should connect to the GND directly without 
+	GND cut, and punch more ground vias (10 via/cm^2), this can reduce 
+	EMI effect.
+16. Adding a Bead/100MHZ/470ohm/2A on Vbus 5V at USB upstream connector could 
+	reduce noise from PC(Host).
+17. In stead of using power line, the power plane have better stability 
+	against to EFT(Electrical Fast Transient).	
